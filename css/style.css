@@ -6742,7 +6742,7 @@ select::-ms-expand {
 -------------------------------------------------------*/
 
 input[type="checkbox"] {
-  display: none;
+  display: inline;
 }
 
 input[type="checkbox"] + label:before {

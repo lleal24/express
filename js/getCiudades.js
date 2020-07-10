@@ -1,14 +1,14 @@
 let urlCiudades = 'https://fpaq.azurewebsites.net/api/ciudades';
 window.onload = callService;
 
-function callService(){
+function callService() {
     getCiudades();
 }
-async function getCiudades(){
+async function getCiudades() {
     try {
         sessionStorage.setItem('appData', '25')
         let req = await fetch(urlCiudades);
-        if(req.status === 200){
+        if (req.status === 200) {
             let data = await req.json();
             localStorage.setItem("ciudades", JSON.stringify(data));
             obtenerPaises(data);
@@ -21,17 +21,19 @@ async function getCiudades(){
 
 function obtenerPaises(data) {
     let paises = [];
+    let elementos = document.querySelectorAll('#pais');
     data.forEach(element => {
         if (paises.indexOf(element.Pais) == -1) {
             paises.push(element.Pais);
         }
     });
-    paises.forEach(element => {
-        let select = document.getElementById('pais');
-        let option = document.createElement('option');
-        option.value = element;
-        option.text = element;
-        select.add(option);
+    paises.forEach(element => {  
+        elementos.forEach(elemento => {
+            let option = document.createElement('option');
+            option.value = element;
+            option.text = element;
+            elemento.add(option);
+        });
     });
 }
 
@@ -39,56 +41,95 @@ function cargaDept() {
     let tempArray = []
     let departamentos = [];
     let data = JSON.parse(localStorage.getItem("ciudades"));
-    let pais = document.getElementById('pais').value;
-    data.forEach(element => {
-        if (element.Pais == pais) {
-            tempArray.push(element.Estado);
-        }
+    let pais = document.querySelectorAll('#pais');
+    pais.forEach(elemento => {
+        let paisValue = elemento.value;
+        data.forEach(element => {
+            if(element.Pais == paisValue){
+                tempArray.push(element.Estado);
+            }
+        });
+        tempArray.forEach(element => {
+            if (departamentos.indexOf(element) == -1) {
+                departamentos.push(element);
+            }
+        });
     });
-    tempArray.forEach(element => {
-        if (departamentos.indexOf(element) == -1) {
-            departamentos.push(element);
-        }
+    let elementos = document.querySelectorAll('#estado');
+    elementos.forEach(elemento => {
+        elemento.options.length = 1;
+        departamentos.forEach(departamento => {
+            let option = document.createElement('option');
+            option.text = departamento;
+            option.value = departamento;
+            elemento.add(option);
+        });
     });
-    let select = document.getElementById('estado');
-    select.options.length = 1;
-    departamentos.forEach(element => {
-        let option = document.createElement("option");
-        option.text = element;
-        option.value = element;
-        select.add(option);
-    });
-
 }
 
-function  cargaCiudades(){
+function cargaCiudades() {
     let ciudades = [];
     let data = JSON.parse(localStorage.getItem("ciudades"));
-    let estado = document.getElementById('estado').value;
-    data.forEach(element => {
-        if(element.Estado == estado){
-            ciudades.push(element.Ciudad);
-        }
+    let estado = document.querySelectorAll('#estado');
+    estado.forEach(elemento => {
+        let estadoValue = elemento.value;
+        data.forEach(element => {
+            if (element.Estado == estadoValue) {
+                ciudades.push(element.Ciudad);
+            }
+        });
     });
-    let select = document.getElementById('ciudad');
-    select.options.length = 1;
-    ciudades.forEach(ciudad => {
-        let option = document.createElement("option");
-        option.value = ciudad;
-        option.text = ciudad;
-        select.add(option);
-    });
+    let elementos = document.querySelectorAll('#ciudad');
+    elementos.forEach(elemento =>{
+        elemento.options.length = 1;
+        ciudades.forEach(ciudad => {
+            let option = document.createElement('option');
+            option.value = ciudad;
+            option.text = ciudad;
+            elemento.add(option);
+        });
+    })
 }
 
-function getIdLocation(){
+function getIdLocation() {
+    let datosCiudad = [];
+    let datosEstado = [];
+    let datosPais = [];
     let data = JSON.parse(localStorage.getItem("ciudades"));
-    let ciudad = document.getElementById('ciudad').value;
-    let estado = document.getElementById('estado').value;
-    let pais = document.getElementById('pais').value; 
-    data.forEach(element => {
-        if(ciudad == element.Ciudad && estado == element.Estado && pais == element.Pais){
+    let ciudades = document.querySelectorAll('#ciudad');
+    let estados = document.querySelectorAll('#estado');
+    let paises = document.querySelectorAll('#pais');
+    ciudades.forEach(ciudad =>{
+        datosCiudad.push(ciudad.value);
+    });
+    estados.forEach(estado =>{
+        datosEstado.push(estado.value);
+    });
+    paises.forEach(pais =>{
+        datosPais.push(pais.value);
+    });
+
+    data.forEach(element =>{
+        if(datosCiudad[1] == element.Ciudad && datosEstado[1] == element.Estado && datosPais[1] == element.Pais){
             document.getElementById('ciudadIdRegistro').value = element.CiudadId;
-            //console.log(element.CiudadId);
+            alert(element.CiudadId);
         }
     });
+    
+    // data.forEach(element => {
+    //     if(ciudad[1] == element.Ciudad && estado[1] == element.Estado && pais[1] == element.Pais){
+    //         document.getElementById('ciudadIdRegistro').value = element.CiudadId;
+    //         console.log(element.CiudadId);
+    //     }
+    // });
+
+    // let ciudad = document.getElementById('ciudadRegistro').value;
+    // let estado = document.getElementById('estadoRegistro').value;
+    // let pais = document.getElementById('paisRegistro').value;
+    // data.forEach(element => {
+    //     if (ciudad == element.Ciudad && estado == element.Estado && pais == element.Pais) {
+    //         document.getElementById('ciudadIdRegistro').value = element.CiudadId;
+    //         //console.log(element.CiudadId);
+    //     }
+    // });
 }

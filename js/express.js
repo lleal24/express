@@ -10,7 +10,7 @@ var fivepaq = {
 		dataIn.E = email;
 		dataIn.N = '';
 		dataIn.Tel = telefono;
-		dataIn.Con = ''; /* cambioll */
+		dataIn.Con = ''; 
 
 		var datos = {
 			Email: email,
@@ -27,8 +27,6 @@ var fivepaq = {
 
 		$.ajax(ajaxObj)
 			.done(function (result) {
-
-				console.log(result);
 				if (result.token != '') {
 					dataIn.T = result.token;
 					debugger;
@@ -37,7 +35,7 @@ var fivepaq = {
 					dataIn.L = true;
 					dataIn.E = email;
 					dataIn.Tel = telefono;
-					dataIn.Con = ''; /* cambio */
+					dataIn.Con = '';
 					fivepaq.cargarDataUser(dataIn, LoginOk, LoginFail);
 				}
 			})
@@ -63,8 +61,7 @@ var fivepaq = {
 		var request = $.ajax(ajaxObj);
 
 		request.fail(function (jqXHR, textStatus) {
-
-			console.log(jqXHR);
+			//console.log(jqXHR);
 			dataIn.T = '';
 			dataIn.L = false;
 			sessionStorage.setItem('appData', JSON.stringify(dataIn));
@@ -172,7 +169,7 @@ var fivepaq = {
 		} 
 
 		$.ajax({
-			url: "https://fpaqtest.azurewebsites.net/api/cuentas",
+			url: "https://fpaq.azurewebsites.net/api/cuentas",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Cuenta),
@@ -189,7 +186,7 @@ var fivepaq = {
 
 		var ajaxObj = {
 			type: 'GET',
-			url: "https://fpaqtest.azurewebsites.net/api/Ciudades/",
+			url: "https://fpaq.azurewebsites.net/api/Ciudades/",
 			contentType: 'application/json; charset=utf-8'
 		};
 
@@ -237,7 +234,7 @@ var fivepaq = {
 		Datos.NewPassword = NewPassword;
 
 		var ajaxObj = {
-			url: "https://fpaqtest.azurewebsites.net/api/Cuentas/ChangePassword",
+			url: "https://fpaq.azurewebsites.net/api/Cuentas/ChangePassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -330,7 +327,6 @@ var fivepaq = {
 		Datos.Code = Code;
 		var ajaxObj = {
 			url: "https://fpaq.azurewebsites.net/api/cuentas/resetpassword",
-			// url: "http://localhost:44347/api/Cuentas/ResetPassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -385,7 +381,6 @@ var fivepaq = {
 		formData.append('TariffCode', TariffCode);
 
 		$.ajax({
-			// url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithImageAsync",
 			url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithImageAsync",
 			type: 'POST',
 			contentType: false,
@@ -424,7 +419,6 @@ var fivepaq = {
 		Alerta.TariffCode = TariffCode;
 		$.ajax({
 			url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithValueAsync",
-			// url: "https://localhost:44347/api/PreAlerts/CreatePrealertWithValueAsync",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Alerta),

@@ -227,3 +227,31 @@ function handleException(request, message, error) {
     swal("¡ha ocurrido un error! ", "por favor comunique con nosotros al Email: soporte@Fivepaq.com ", "error");
 }
 // ====================== FIN CREACION DE CUENTA =========================================================
+
+var LoginOk = function () {
+
+    $("#mensajeLogin").html('<strong>Ha ingresado al sistema</strong>');
+    $("#mensajeLogin").removeClass('alert alert-danger');
+    $("#mensajeLogin").addClass('alert alert-success');
+    $("#loader").hide();
+    location.href = "mc-actuales.html";
+}
+var LoginFail = function () {
+
+    $("#mensajeLogin").html('<strong>Error en intento de Login!</strong>');
+    $("#mensajeLogin").removeClass('alert alert-success');
+    $("#mensajeLogin").addClass('alert alert-danger');
+    $("#loader").hide();
+}
+
+function logueo() {
+    debugger
+    $("#loader").show();
+    var datos = {
+        Email: $("#Email").val(),
+        Password: $("#Password").val(),
+        RememberMe: $("#RememberMe").prop('checked')
+    };
+
+    fivepaq.Login(datos.Email, datos.Password, datos.RememberMe, LoginOk, LoginFail);
+}

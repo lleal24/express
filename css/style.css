@@ -98,7 +98,7 @@ body img {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   margin-top: 0;
-  color: #1a294e;
+  color: #000000;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -4406,6 +4406,8 @@ article img {
 
 .left-sidebar {
   float: left;
+  position: sticky;
+  top: 0em;
 }
 
 .sidebar:not(.left-sidebar) {
@@ -4452,6 +4454,12 @@ article img {
 
 .widget.categories ul li a {
   color: #7a7a7a;
+   scroll-behavior: smooth;
+   overflow-y: hidden;
+   }
+#aside{
+  scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 .widget.categories ul li a:hover,

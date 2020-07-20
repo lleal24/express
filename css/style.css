@@ -6914,3 +6914,14 @@ color: white;
     display: none;
   }
 }
+
+/* Alinear mostrar contraseña */
+.alinear{
+  float: right;
+  margin-top: -9%;
+  margin-right: 5%;
+  position: relative;
+  display: block; 
+  z-index: 2;
+
+}

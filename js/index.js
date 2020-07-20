@@ -1,3 +1,12 @@
+$('registro').submit(function (ev) {
+
+    ev.preventDefault();
+
+    //later you decide you want to submit
+    $(this).unbind('submit').submit()
+
+});
+
 
 // =======================  MOSTRAR CONTRASEÑA ====================================================
 function mostrarContrasena() {
@@ -41,18 +50,10 @@ function grabarClick() {
                 required: true,
                 email: true,
             },
-            emailRegistroConfirm: {
-                required: true,
-                email: true,
-                equalTo: "#emailRegistro"
-            },
             telefono: {
                 required: true,
                 regex: true,
                 maxlength: 20,
-            },
-            ciudadNombreRegistro: {
-                required: true,
             },
             direccion: {
                 required: true,
@@ -86,12 +87,6 @@ function grabarClick() {
             },
             accountTipoIdentificacion: {
                 required: true,
-            },
-            passwordRegistroConfirm: {
-                required: true,
-                maxlength: 50,
-                equalTo: "#passwordRegistro",
-                minlength: 5
             },
             "checkbox[]": {
                 required: true,
@@ -229,12 +224,11 @@ function handleException(request, message, error) {
 // ====================== FIN CREACION DE CUENTA =========================================================
 
 var LoginOk = function () {
-
     $("#mensajeLogin").html('<strong>Ha ingresado al sistema</strong>');
     $("#mensajeLogin").removeClass('alert alert-danger');
     $("#mensajeLogin").addClass('alert alert-success');
     $("#loader").hide();
-    location.href = "mc-actuales.html";
+    location.href = "micuenta.html";
 }
 var LoginFail = function () {
 
@@ -245,13 +239,39 @@ var LoginFail = function () {
 }
 
 function logueo() {
-    debugger
+    let expiresdate = new Date(2068, 1, 02, 11, 20);
     $("#loader").show();
     var datos = {
         Email: $("#Email").val(),
         Password: $("#Password").val(),
         RememberMe: $("#RememberMe").prop('checked')
     };
-
+    /* Guardar datos recordar contraseña  */
+    if ($("#RememberMe").prop('checked')) {
+        document.cookie = "username=" + encodeURIComponent(btoa(datos.Email)) + "; expires=" + expiresdate.toUTCString();
+        document.cookie = "password=" + encodeURIComponent(btoa(datos.Password)) + "; expires=" + expiresdate.toUTCString();
+    }
     fivepaq.Login(datos.Email, datos.Password, datos.RememberMe, LoginOk, LoginFail);
 }
+
+
+
+function mostrarPassword() {
+    var cambio = document.getElementById("Password");
+    if (cambio.type == "password") {
+        cambio.type = "text";
+        $(".icon").removeClass("fa fa-eye-slash").addClass("fa fa-eye");
+    } else {
+        cambio.type = "password";
+        $(".icon").removeClass("fa fa-eye").addClass("fa fa-eye-slash");
+    }
+}
+$(document).ready(function () {
+    //CheckBox mostrar contraseña
+    $("#ShowPassword").click(function () {
+        $("#Password").attr(
+            "type",
+            $(this).is(":checked") ? "text" : "password"
+        );
+    });
+});

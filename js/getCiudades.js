@@ -112,7 +112,7 @@ function getIdLocation() {
     data.forEach(element =>{
         if(datosCiudad[1] == element.Ciudad && datosEstado[1] == element.Estado && datosPais[1] == element.Pais){
             document.getElementById('ciudadIdRegistro').value = element.CiudadId;
-            alert(element.CiudadId);
+            // alert(element.CiudadId);
         }
     });
     

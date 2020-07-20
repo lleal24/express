@@ -20,7 +20,7 @@ var fivepaq = {
 
 		var ajaxObj = {
 			type: 'POST',
-			url: "https://fpaq.azurewebsites.net/api/auth",
+			url: "https://fpaqtest.azurewebsites.net/api/auth",
 			contentType: 'application/json; charset=utf-8',
 			data: JSON.stringify(datos)
 		};
@@ -47,7 +47,7 @@ var fivepaq = {
 	},
 
 	cargarDataUser: function (dataIn, LoginOk, LoginFail) {
-		var infUrl = "https://fpaq.azurewebsites.net/api/auth/userinfo/" + dataIn.E;
+		var infUrl = `https://fpaqtest.azurewebsites.net/api/auth/userinfo/${dataIn.E}`;
 
 		var ajaxObj = {
 			type: 'GET',
@@ -102,7 +102,7 @@ var fivepaq = {
 	},
 
 	cargarCarriers: function (CarriersOk, CarriersFail) {
-		var infUrl = "https://fpaq.azurewebsites.net/api/carriers";
+		var infUrl = "https://fpaqtest.azurewebsites.net/api/carriers";
 		var dataIn = fivepaq.dataOut();
 
 		var ajaxObj = {
@@ -128,7 +128,7 @@ var fivepaq = {
 	cargarDireccionesCliente: function () {
 		var dataIn = fivepaq.dataOut();
 		debugger;
-		var infUrl = "https://fpaq.azurewebsites.net/api/locations/" + dataIn.C;
+		var infUrl = `https://fpaqtest.azurewebsites.net/api/locations/${dataIn.C}`;
 
 		var ajaxObj = {
 			type: 'GET',
@@ -152,7 +152,7 @@ var fivepaq = {
 	CuentaAdd: function (ConvenioCta, Documento, Empresa, Nombre, Direccion, CiudadId, CodigoPostal, Telefono, Password, EMail, Asesor, Ticket) {
 		Cuenta = new Object();
 
-		if (ConvenioCta == 1022) {
+		if (ConvenioCta == 25) {
 			Cuenta.Convenio = "CC";
 			Cuenta.LlaveConvenio = "1700b44e-381d-4f83-87ee-7258cbb16ed9";
 			Cuenta.Documento = Documento
@@ -169,7 +169,7 @@ var fivepaq = {
 		} 
 
 		$.ajax({
-			url: "https://fpaq.azurewebsites.net/api/cuentas",
+			url: "https://fpaqtest.azurewebsites.net/api/cuentas",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Cuenta),
@@ -186,7 +186,7 @@ var fivepaq = {
 
 		var ajaxObj = {
 			type: 'GET',
-			url: "https://fpaq.azurewebsites.net/api/Ciudades/",
+			url: "https://fpaqtest.azurewebsites.net/api/Ciudades/",
 			contentType: 'application/json; charset=utf-8'
 		};
 
@@ -234,7 +234,7 @@ var fivepaq = {
 		Datos.NewPassword = NewPassword;
 
 		var ajaxObj = {
-			url: "https://fpaq.azurewebsites.net/api/Cuentas/ChangePassword",
+			url: "https://fpaqtest.azurewebsites.net/api/Cuentas/ChangePassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -279,7 +279,7 @@ var fivepaq = {
 		Datos = new Object();
 		Datos.Email = Email;
 		var ajaxObj = {
-			url: "https://fpaq.azurewebsites.net/api/cuentas/forgotpassword",
+			url: "https://fpaqtest.azurewebsites.net/api/cuentas/forgotpassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -287,7 +287,7 @@ var fivepaq = {
 		$.ajax(ajaxObj)
 			.done(function (result) {
 				console.log("Envio mail");
-				Swal.fire({
+				swal({
 					title: '¡Te Enviamos un Email!',
 					text: "Te hemos enviado un correo electrónico con instrucciones para volver a establecer tu contraseña.",
 					type: 'success',
@@ -296,7 +296,7 @@ var fivepaq = {
 				}).then((result) => {
 					if (result.value) {
 						debugger;
-						location.href = "../index.html";
+						location.href = "index.html";
 					}
 				})
 			})
@@ -305,7 +305,7 @@ var fivepaq = {
 				console.log(jqXHR);
 				console.log("sadRequest");
 				console.log(textStatus);
-				swal.fire({
+				swal({
 					title: '¡Algo paso!',
 					text: 'por favor comunique con nosotros al Email: soporte@fivepaq.com',
 					type: 'error',
@@ -326,7 +326,7 @@ var fivepaq = {
 		Datos.ConfirmPassword = ConfirmPassword;
 		Datos.Code = Code;
 		var ajaxObj = {
-			url: "https://fpaq.azurewebsites.net/api/cuentas/resetpassword",
+			url: "https://fpaqtest.azurewebsites.net/api/cuentas/resetpassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -335,7 +335,7 @@ var fivepaq = {
 			.done(function (result) {
 				console.log("ResteoPass");
 				console.log(result);
-				swal.fire({
+				swal({
 					title: '¡Se ha restablecido la contraseña!',
 					text: "Inicia sesión nuevamente",
 					type: 'success',
@@ -352,7 +352,7 @@ var fivepaq = {
 				console.log("sadRequest");
 				console.log(jqXHR);
 				console.log(textStatus);
-				swal.fire({
+				swal({
 					title: '¡Algo paso!',
 					text: "por favor comunique con nosotros al Email: soporte@fivepaq.com",
 					type: 'error',
@@ -381,7 +381,7 @@ var fivepaq = {
 		formData.append('TariffCode', TariffCode);
 
 		$.ajax({
-			url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithImageAsync",
+			url: "https://fpaqtest.azurewebsites.net/api/PreAlerts/CreatePrealertWithImageAsync",
 			type: 'POST',
 			contentType: false,
 			processData: false,
@@ -395,7 +395,7 @@ var fivepaq = {
 			error: function (request, message, error) {
 				console.log(message);
 				console.log(error);
-				swal.fire({
+				swal({
 					title: '¡Algo paso!',
 					text: "por favor comunique con nosotros al Email: soporte@fivepaq.com",
 					type: 'error',
@@ -418,7 +418,7 @@ var fivepaq = {
 		Alerta.idLocation = idLocation;
 		Alerta.TariffCode = TariffCode;
 		$.ajax({
-			url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithValueAsync",
+			url: "https://fpaqtest.azurewebsites.net/api/PreAlerts/CreatePrealertWithValueAsync",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Alerta),
@@ -434,7 +434,7 @@ var fivepaq = {
 				console.log(request);
 				console.log(message);
 				console.log(error);
-				swal.fire({
+				swal({
 					title: '¡Algo Sucedió!',
 					text: request.responseText,
 					type: 'error',

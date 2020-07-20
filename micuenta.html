@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>CourierExpress | Mi cuenta</title>
 
@@ -8,9 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="description" content="">
 	<link rel="author" href="https://plus.google.com/u/0/104296509460513856975" />
-	 
+
 	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,600,800,400,300%7CMontserrat:400,700%7CRaleway:600,400' rel='stylesheet'>
+	<link
+		href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,600,800,400,300%7CMontserrat:400,700%7CRaleway:600,400'
+		rel='stylesheet'>
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 	<!-- Css -->
@@ -19,21 +22,29 @@
 	<link rel="stylesheet" href="revolution/css/settings.css" />
 	<link rel="stylesheet" href="css/rev-slider.css" />
 	<link rel="stylesheet" href="css/font-icons.css" />
-	<link rel="stylesheet" href="css/sliders.css" /> 
+	<link rel="stylesheet" href="css/sliders.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/responsive.css" />
 	<link rel="stylesheet" href="css/spacings.css" />
 	<link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/color.css" />
-    <!--Scroll-->
-    <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
-    <script type="text/javascript" src="dist/smooth-scroll.polyfills.js"></script>
+	<link rel="stylesheet" href="css/color.css" />
+	<!--Scroll-->
+	<script type="text/javascript" src="js/smooth-scroll.min.js"></script>
+	<script type="text/javascript" src="dist/smooth-scroll.polyfills.js"></script>
 
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="apple-touch-icon" href="img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon.ico">
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vue-select@3.1.0/dist/vue-select.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
@@ -51,7 +62,8 @@
 					<div class="top-bar-links">
 						<ul class="col-sm-6">
 							<li class="top-bar-email">
-								<i class="fa fa-envelope"></i><a style="color: white;" href="mailto:coureirexpress@gmail.com">acasillero@CourierExpress.net</a>
+								<i class="fa fa-envelope"></i><a style="color: white;"
+									href="mailto:coureirexpress@gmail.com">acasillero@CourierExpress.net</a>
 							</li>
 							<li class="top-bar-phone">
 								<i class="fa fa-phone"></i><span>+ +57 321 273 3038 | +571 495 48 08</span>
@@ -59,9 +71,9 @@
 						</ul>
 
 						<div class="col-sm-6 social-icons text-right nopadding">
-							<a href="#"><i class="fa fa-facebook"></i></a>	
-							<a href="#"><i class="fa fa-instagram"></i></a>									
-								
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+
 						</div>
 
 					</div>
@@ -80,7 +92,8 @@
 					<div class="row">
 
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -108,22 +121,22 @@
 										</a>
 									</div>
 								</div>
-							</div>	        		        	
+							</div>
 						</div>
 
 						<div class="col-md-9 nav-wrap right">
 							<div class="collapse navbar-collapse" id="navbar-collapse">
- 				
+
 								<ul class="nav navbar-nav navbar-right">
-								<li class="dropdown active">
+									<li class="dropdown active">
 									<li class="dropdown">
-										<li><a href="" onclick="cerrarsesion()"><i class="fa fa-home" id="salir"></i> Cerrar
-												Mi Cuenta</a>
-										</li>
+									<li><a href="" onclick="cerrarsesion()"><i class="fa fa-home" id="salir"></i> Cerrar
+											Mi Cuenta</a>
+									</li>
 									</li> <!-- end portfolio -->
 
 
-								
+
 
 								</ul> <!-- end menu -->
 							</div> <!-- end collapse -->
@@ -140,14 +153,14 @@
 			<div class="container relative clearfix">
 				<div class="title-holder">
 					<div class="title-text">
-						<h1 class="uppercase">Bienvenido  a Tu cuenta</h1>
+						<h1 class="uppercase">Bienvenido a Tu cuenta</h1>
 						<ol class="breadcrumb">
 							<li>
 								<a href="index.html">Datos Personales</a>
-                            </li>
-                            <li class="active">
-                                Tu Cuenta
-                            </li>
+							</li>
+							<li class="active">
+								Tu Cuenta
+							</li>
 						</ol>
 					</div>
 				</div>
@@ -165,633 +178,744 @@
 							<div class="col-sm-12 text-center">
 								<h1 class="section-title section-title__lg">Datos Generales</h1>
 							</div> <!-- end col -->
-						</div><br/><br/> <!-- end row -->
-					
-							<!-- 1/2 column -->
-							<div class="row">
-                        <h2 class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50">
-                            Nombre - Contraseña - Direcciones</h2>
+						</div><br /><br /> <!-- end row -->
 
-								<div class="col-sm-4">
-									<h6 id="nomUsuario">Juan de Lacosa</h6>
-									<ul>	
-										<li ><strong>Número de Casillero</strong></li>
-										<span id="numCasillero">FP00001IG</span>
-										<li><strong>Correo Electronico</strong> </li>
-										<span id="emailUsuario">marven@iguama.com</span>
-										<li><strong>Teléfono</strong></li>
-                                        <li id="telefonoUsuario">3174219461</li>
-                                        <li><strong>Plan</strong></li>
-                                        <li id="idplan">Fast</li>
+						<!-- 1/2 column -->
+						<div class="row">
+							<h2 class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50">
+								Nombre - Contraseña - Direcciones</h2>
+
+							<div class="col-sm-4">
+								<h6 id="nomUsuario"></h6>
+								<ul>
+									<li><strong>Numero Casillero</strong></li>
+									<span id="numCasillero"></span>
+									<li><strong>Correo Electronico</strong> </li>
+									<span id="emailUsuario"></span>
+									<li><strong>Teléfono</strong></li>
+									<li id="telefonoUsuario"></li>
+								</ul>
+
+							</div> <!-- end col -->
+
+							<div class="col-sm-8">
+								<h6>Cambio de Contraseña</h6>
+								<!-- Contraseña -->
+								<div class="tabs vertical mt-40 mb-60">
+
+									<ul class="nav nav-tabs">
+
+										<li class="active">
+											<a href="#tab-four" data-toggle="tab">Contraseña</a>
+										</li>
+
+										<li>
+											<a href="#tab-five" data-toggle="tab">Agregar Dirección</a>
+										</li>
+										<li>
+											<a href="#tab-six" data-toggle="tab">Ver direcciones</a>
+										</li>
+
 									</ul>
-									
-								</div> <!-- end col -->
 
-								<div class="col-sm-8">
-									<h6>Cambio de Contraseña</h6>
-										<!-- Contraseña -->
-						<div class="tabs vertical mt-40 mb-60">
 
-							<ul class="nav nav-tabs">
-								
-								<li class="active">
-									<a href="#tab-four" data-toggle="tab">Contraseña</a>
-								</li>
-								
-								<li>
-									<a href="#tab-five" data-toggle="tab">Agregar Dirección</a>
-								</li>
-								<li>
-									<a href="#tab-six" data-toggle="tab">Ver direcciones</a>
-								</li>
-							
-							</ul> 
+									<!-- tab content -->
+									<div class="tab-content">
 
-							
-							<!-- tab content -->
-							<div class="tab-content">
-								
-								<div class="tab-pane fade in active" id="tab-four">
-									<p>
-									<label for="input-label">Nueva Contraseña</label>
-								<input name="password" id="password" type="password" placeholder="Nueva Contraseña">
-									</p>
-								
-									<p>
-										<label for="input-label">Confirmar</label>
-								<input name="password" id="password" type="password" placeholder="Confirmar Contraseña">
-								</p>
-								<button class="btn btn-sm btn-color rounded newsletter-submit" type="submit" onclick="cambioPass()">Guardar
-								    Nueva</button>
-								<div id="mensajeLogin"></div>
+										<div class="tab-pane fade in active" id="tab-four">
+											<p>
+												<label for="input-label">Nueva Contraseña</label>
+												<input name="password" id="password" type="password"
+													placeholder="Nueva Contraseña">
+											</p>
 
-								</div>
-                                
-								<div class="tab-pane fade" id="tab-five">
-									<p>
-									<h5>Multidirecciones</h5>
-									<p>Puesdes agregar las direcciones de destino de tus envíos o compras</p>
+											<p>
+												<label for="input-label">Confirmar</label>
+												<input name="password" id="password" type="password"
+													placeholder="Confirmar Contraseña">
+											</p>
+											<button class="btn btn-sm btn-color rounded newsletter-submit" type="submit"
+												onclick="cambioPass()">Guardar
+												Nueva</button>
+											<div id="mensajeLogin"></div>
 
-								<!-- Button trigger modal -->
-								<a href="#" class="btn btn-md btn-dark mt-10" data-toggle="modal" data-target="#myModal">Nueva Dirección</a>
+										</div>
 
-										<!-- Modal -->
-										<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-											<div class="modal-dialog" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-																aria-hidden="true">&times;</span></button>
-														<h4 class="modal-title" id="myModalLabel">Agregar Dirección de entrega</h4>
-													</div>
-													<div class="modal-body">
-														<ul>
-														<li>
-											<label for="input-label">Direcció de destino</label>
-													<input name="name" id="input-label" type="text" placeholder="Ejemplo: Casa-oficina-amigo">
-														</li>
-															<li>
-																<label for="input-label">Nombre del destinatarios</label>
-													<input name="name" id="input-label" type="text" placeholder="Ejemplo: Nombre familiar,amigo etc">
-															</li>
-																	<li>
-																		<label for="input-label">Dirección</label>
-													<input name="name" id="input-label" type="number" placeholder="Dirección del envio">
-																	</li>
-																	<li>
-																		<label for="input-label">Codigo Postal</label>
-													<input name="name" id="input-label" type="number" placeholder="Ejemplo: Bogotá 110111">
-																	</li>
-																	<li>
+										<div class="tab-pane fade" id="tab-five">
+											<p>
+											<h5>Multidirecciones</h5>
+											<p>Puesdes agregar las direcciones de destino de tus envíos o compras</p>
+
+											<!-- Button trigger modal -->
+											<a href="#" class="btn btn-md btn-dark mt-10" data-toggle="modal"
+												data-target="#myModal">Nueva Dirección</a>
+
+											<!-- Modal -->
+											<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+												aria-labelledby="myModalLabel">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal"
+																aria-label="Close"><span
+																	aria-hidden="true">&times;</span></button>
+															<h4 class="modal-title" id="myModalLabel">Agregar Dirección
+																de entrega</h4>
+														</div>
+														<div class="modal-body">
+															<ul>
+																<li>
+																	<label for="input-label">Direcció de destino</label>
+																	<input name="name" id="input-label" type="text"
+																		placeholder="Ejemplo: Casa-oficina-amigo">
+																</li>
+																<li>
+																	<label for="input-label">Nombre del
+																		destinatarios</label>
+																	<input name="name" id="input-label" type="text"
+																		placeholder="Ejemplo: Nombre familiar,amigo etc">
+																</li>
+																<li>
+																	<label for="input-label">Dirección</label>
+																	<input name="name" id="input-label" type="number"
+																		placeholder="Dirección del envio">
+																</li>
+																<li>
+																	<label for="input-label">Codigo Postal</label>
+																	<input name="name" id="input-label" type="number"
+																		placeholder="Ejemplo: Bogotá 110111">
+																</li>
+																<li>
 																	<label for="input-label">Ciudad de Destino</label>
 
-																			<select>
-																				<option selected value="default">Ciudad</option>
-																				<option value="green">Cali</option>
-																				<option value="black">Medellin</option>
-																				<option value="white">Barranquilla</option>
-																			</select>
-																	
-																	</li>
-														</ul>
+																	<select>
+																		<option selected value="default">Ciudad</option>
+																		<option value="green">Cali</option>
+																		<option value="black">Medellin</option>
+																		<option value="white">Barranquilla</option>
+																	</select>
+
+																</li>
+															</ul>
+														</div>
+
+														<div class="modal-footer">
+															<a class="btn btn-md btn-light"
+																data-dismiss="modal">Cerrar</a>
+															<a class="btn btn-md btn-color">Salvar Dirección</a>
+														</div>
+
 													</div>
-													
-													<div class="modal-footer">
-														<a class="btn btn-md btn-light" data-dismiss="modal">Cerrar</a>
-														<a class="btn btn-md btn-color">Salvar Dirección</a>
-													</div>
-												
 												</div>
-											</div>
-										</div> <!-- end modal -->
-										</p>
-							</div>
-							<div class="tab-pane fade" id="tab-six">
-								<ul>
-									<li>
-										<label for="input-label">Dirección Uno</label>
-										<input name="name" id="input-label" type="text" placeholder="Ejemplo: Casa-oficina-amigo">
-									</li>
-									<li>
-										<label for="input-label">Nombre del destinatarios</label>
-										<input name="name" id="input-label" type="text" placeholder="Ejemplo: Nombre familiar,amigo etc">
-									</li>
-									<li>
-										<label for="input-label">Dirección</label>
-										<input name="name" id="input-label" type="number" placeholder="Dirección del envio">
-									</li>
+											</div> <!-- end modal -->
+											</p>
+										</div>
+										<div class="tab-pane fade" id="tab-six">
+											<ul>
+												<li>
+													<label for="input-label">Dirección Uno</label>
+													<input name="name" id="input-label" type="text"
+														placeholder="Ejemplo: Casa-oficina-amigo">
+												</li>
+												<li>
+													<label for="input-label">Nombre del destinatarios</label>
+													<input name="name" id="input-label" type="text"
+														placeholder="Ejemplo: Nombre familiar,amigo etc">
+												</li>
+												<li>
+													<label for="input-label">Dirección</label>
+													<input name="name" id="input-label" type="number"
+														placeholder="Dirección del envio">
+												</li>
 
-									<li>
-										<label for="input-label">Ciudad de Destino</label>
+												<li>
+													<label for="input-label">Ciudad de Destino</label>
 
-										<select>
-											<option selected value="default">Ciudad</option>
-											<option value="green">Cali</option>
-											<option value="black">Medellin</option>
-											<option value="white">Barranquilla</option>
-										</select>
+													<select>
+														<option selected value="default">Ciudad</option>
+														<option value="green">Cali</option>
+														<option value="black">Medellin</option>
+														<option value="white">Barranquilla</option>
+													</select>
 
-									</li>
-								</ul>
-							</div>
-								
-							</div>
-						</div> <!-- end contraseña-->
-					</div>
-							</div> <!-- end row -->
-			
+												</li>
+											</ul>
+										</div>
 
-				<!--Consulta Alertas envios -->
-				<section class="section-wrap pb-10" id="paquete">
-					<h2 class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50 mb-0">Consulta tus compras</h2>
-				
-					<!-- Accordions -->
-					<div class="panel-group accordion mb-50" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="minus">Envíos Actuales<span>&nbsp;</span>
-								</a>
+									</div>
+								</div> <!-- end contraseña-->
 							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-								<div class="panel-body">
-									<!--Consulta envios -->
-										<!-- Bordered Table -->
-											<table class="table table-bordered">
-												<thead>
-													<tr>
+						</div> <!-- end row -->
+
+
+						<!--Consulta Alertas envios -->
+						<section class="section-wrap pb-10" id="paquete">
+							<h2
+								class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50 mb-0">
+								Consulta tus compras</h2>
+
+							<!-- Accordions -->
+							<div class="panel-group accordion mb-50" id="accordion">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+											class="minus">Envíos Actuales<span>&nbsp;</span>
+										</a>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse in">
+										<div class="panel-body">
+											<div id="appPaq" class="table-responsive" v-cloak>
+												<table class="table table-bordered table-striped  table-bordered ">
+													<thead class="table-responsive">
 														<th>Fecha</th>
 														<th>Guía</th>
 														<th>Contenido</th>
-														<th>Vr USD</th>
-														<th>Peso</th>
+														<th>VR-USD</th>
+														<th>Peso (Grs)</th>
 														<th>Estado</th>
-														<th>Modo</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<th>07/02/2019 03:05</th>
-														<td>2110</td>
-														<td>Adidas Originals S..</td>
-														<td>33.29</td>
-														<td>532</td>
-														<td>Salida de Aduana</td>
-														<td>Tracking</td>
-													</tr>
-													<tr>
-														<th>07/02/2019 03:05</th>
-														<td>2110</td>
-														<td>Adidas Originals S..</td>
-														<td>33.29</td>
-														<td>532</td>
-														<td>Salida de Aduana</td>
-														<td>Tracking</td>
-									
-													</tr>
-													<tr>
-														<th>07/02/2019 03:05</th>
-														<td>2110</td>
-														<td>Adidas Originals S..</td>
-														<td>33.29</td>
-														<td>532</td>
-														<td>Salida de Aduana</td>
-														<td>Tracking</td>
-													</tr>
-													<tr>
-														<th>407/02/2019 03:05</th>
-														<td>2110</td>
-														<td>Adidas Originals S..</td>
-														<td>33.29</td>
-														<td>532</td>
-														<td>Salida de Aduana</td>
-														<td>Tracking</td>
-													</tr>
-									
-												</tbody>
-											</table>
-									<!--End Consulta envios -->
+														<th>&nbsp;</th>
+													</thead>
+													<tbody v-for="paq in results" class="table-responsive">
+														<tr>
+															<td class="table-responsive">
+																{{ paq.ArrivalWinery | formatDate }} </td>
+															<td class="table-responsive">{{ paq.PackageId }}</td>
+															<td class="table-responsive"
+																v-if="paq.Description.length <20">
+																{{ paq.Description }}</td>
+															<td class="table-responsive"
+																v-else="paq.Description.length >=20">
+																{{ paq.Description.substring(0,18)+".."}}</td>
+															<td class="table-responsive">{{ paq.DeclaredValue }}</td>
+															<td class="table-responsive">{{ paq.Weight }}</td>
+															<td class="table-responsive">{{ paq.StateDescription }}</td>
+															<td class="table-responsive"><a
+																	:href="'mc-tracking.html?id=' + paq.PackageId +'#headingTrack'">Tracking</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					
-						<div class="panel panel-default" id="alertas">
-							<div class="panel-heading">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="plus">Mis Alertas<span>&nbsp;</span>
-								</a>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse">
-								<div class="panel-body">
-									<!-- Bordered Table -->
-										<table class="table table-bordered">
-											<thead>
-												<tr>
-													<th>Fecha</th>
-													<th>Número de Alerta</th>
-													<th>Contenido</th>
-													<th>Número Carrier</th>
-													<th>Estado</th>
-													<th>Número de paquete</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<th>07/02/2019 03:05</th>
-													<td>2110</td>
-													<td>Adidas Originals S..</td>
-													<td>33.29</td>
-													<td>532</td>
-													<td>Salida de Aduana</td>
-												</tr>
-												<tr>
-													<th>07/02/2019 03:05</th>
-													<td>2110</td>
-													<td>Adidas Originals S..</td>
-													<td>33.29</td>
-													<td>532</td>
-													<td>Salida de Aduana</td>
-								
-												</tr>
-												<tr>
-													<th>07/02/2019 03:05</th>
-													<td>2110</td>
-													<td>Adidas Originals S..</td>
-													<td>33.29</td>
-													<td>532</td>
-													<td>Salida de Aduana</td>
-												</tr>
-												<tr>
-													<th>407/02/2019 03:05</th>
-													<td>2110</td>
-													<td>Adidas Originals S..</td>
-													<td>33.29</td>
-													<td>532</td>
-													<td>Salida de Aduana</td>
-												</tr>
-								
-											</tbody>
-										</table>
+								<div class="panel panel-default" id="historico">
+									<div class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+											class="plus">Historico paquetes<span>&nbsp;</span>
+										</a>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse">
+										<div class="panel-body">
+											<div id="appHis" class="table-responsive" v-cloak>
+												<table class="table table-bordered table-striped  table-bordered ">
+													<thead class="table-responsive">
+														<th>Fecha</th>
+														<th>Guía</th>
+														<th>Contenido</th>
+														<th>VR-USD</th>
+														<th>Peso (Grs)</th>
+														<th>Estado</th>
+														<th>&nbsp;</th>
+													</thead>
+													<tbody v-for="paq in results" class="table-responsive">
+														<tr>
+															<td class="table-responsive">
+																{{ paq.DateDelivery | formatDate }} </td>
+															<td class="table-responsive">{{ paq.PackageId }}</td>
+															<td class="table-responsive"
+																v-if="paq.Description.length <20">
+																{{ paq.Description }}</td>
+															<td class="table-responsive"
+																v-else="paq.Description.length >=20">
+																{{ paq.Description.substring(0,18)+".."}}</td>
+															<td class="table-responsive">{{ paq.DeclaredValue }}</td>
+															<td class="table-responsive">{{ paq.Weight }}</td>
+															<td class="table-responsive">{{ paq.State }}</td>
+															<td class="table-responsive"><a
+																	:href="'mc-tracking.html?id=' + paq.PackageId +'#headingTrack'">Tracking</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="plus">Alerta tu Envío<span>&nbsp;</span>
-								</a>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">
-									<div class="col-sm-6">
-										<h6>Compañia Transportadora</h6>
-											<select>
-											    <option selected value="default">Transportadora</option>
-											    <option value="UPS">UPS</option>
-											    <option value="Fedex">Fedex</option>
-                                                <option value="DHL">DHL</option>
-                                                 <option value="amazon">Amazon</option>
-                                                 <option value="Otros">Otros</option>
 
-											</select>
-
-									</div> <!-- end col -->
-									
-									<div class="col-sm-6">
-										<h6>Número de Tracking</h6>
-										<input name="Tracking" id="Tracking" type="number" placeholder="# Tracking">
-
-                                    </div> <!-- end col -->
-                                    	<div class="col-sm-6">
-                                    	    <h6>Selecciona el Destino</h6>
-                                    	    <select>
-                                    	        <option selected value="default">Destino</option>
-                                    	        <option value="Medellin">Medellin</option>
-                                    	        <option value="Barranquilla">Barranquilla</option>
-                                    	        <option value="Leticio">Leticia</option>
-                                    	        <option value="Otros">Otros</option>
-
-                                    	    </select>
-
-                                        </div> <!-- end col -->
-                                        	<div class="col-sm-6">
-                                        	    <h6>Destinatarios</h6>
-                                        	    <input name="Destinatario" id="Destinatario" type="number"
-                                        	        placeholder="Nombre Destinatario">
-                                    </div> <!-- end col -->
-                                    <div class="col-sm-6">
-                                        <h6>Tipo de Categoria</h6>
-                                        <select>
-                                            <option selected value="default">Categoria</option>
-                                            <option value="Ropa">Ropa</option>
-                                            <option value="Calzado">Calzado</option>
-                                            <option value="Tecnología">Tecnología</option>
-                                            <option value="Otros">Otros</option>
-                                        </select>
-                                    </div> <!-- end col -->
-                                     	<div class="col-sm-6">
-                                     	    <h6>Descripción Productos</h6>
-                                     	    <input name="Producto" id="Producto" type="text"
-                                     	        placeholder="Ejemplo: Calzado deprotivo ">
-                                         </div> <!-- end col -->
-                                         <div class="col-sm-8">
-                                             <h6>Valor del Producto</h6>
-                                             <input name="Producto" id="Producto" type="number"
-                                                 placeholder="Ejemplo: Costo de la compra en USD en letras y números si es posible">
-                                         </div> <!-- end col -->
-                                         <div class="col-sm-6">
-                                             <h6>Adjuntar Factura</h6>
-                                             <input class="hidden" type="file" id="ImageUrl"
-                                                 onchange="validarExtencion()">
-                                             <div class="input-group input-file" name="Fichier1"></div>
-                                             <input id="fileName" type="text" class="form-control"
-                                                 placeholder='Buscar factura de compra' />
-                                             <span class="input-group-btn">
-                                                 <button class="btn btn-sm btn-color rounded" type="button"
-                                                     onclick="getFile()">Examinar</button>
-                                             </span>
-                                             <div>
-                                                 <p> * Utilice archivos en formato: .gif, .jpg, .png para adjuntar la
-                                                     factura.<br />
-                                                     * Utilice archivos con un tamaño NO superior a 1 MB.<br/>
-                                                     <b>*De no estar seguro de su factura por favor NO adjunte el archivo</b>
-                                                      <br/><input type="button" class="specialbtn" value="Eliminar Archivo"
-                                                          onclick="quitarArchivo()">
-                                                 <p>
-                                             </div>
-                                             <a href="#" class="btn btn-md btn-blue rounded">Alertar paquete</a>
-                                         </div> <!-- end col -->
-                                         
-                                         
+								<div class="panel panel-default" id="alertas">
+									<div class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+											class="plus">Mis Alertas<span>&nbsp;</span>
+										</a>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse">
+										<div class="panel-body">
+											<div id="appAlert" class="table-responsive" v-cloak>
+												<table class="table table-bordered table-striped  table-bordered ">
+													<thead class="table-responsive">
+														<th>Fecha</th>
+														<th>Numero Alerta</th>
+														<th>Contenido</th>
+														<th>Numero Carrier</th>
+														<th>Estado</th>
+														<th>Numero Paquete</th>
+													</thead>
+													<tbody v-for="paq in results" class="table-responsive">
+														<tr>
+															<td class="table-responsive">
+																{{ paq.CreationDate | formatDate }} </td>
+															<td class="table-responsive">{{ paq.PrealertId }}</td>
+															<td class="table-responsive"
+																v-if="paq.Description.length <20">
+																{{ paq.Description }}</td>
+															<td class="table-responsive"
+																v-else="paq.Description.length >=20">
+																{{ paq.Description.substring(0,18)+".."}}</td>
+															<td class="table-responsive">
+																{{ paq.CarrierNumber}}</td>
+															<td class="table-responsive" v-if="paq.State == true">
+																Procesada</td>
+															<td class="table-responsive" v-if="paq.State == false">
+																Alertada</td>
+															<td class="table-responsive" v-if="paq.paqueteId == 0">
+																N/A</td>
+															<td class="table-responsive" v-else>
+																{{ paq.paqueteId }}</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
 								</div>
-                            </div>
-						</div>
-							<div class="panel panel-default" id="calculo">
-								<div class="panel-heading">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="plus">Calcula tu Envío<span>&nbsp;</span>
-									</a>
+
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+											class="plus">Alerta tu Envío<span>&nbsp;</span>
+										</a>
+									</div>
+									<div id="collapseFour" class="panel-collapse collapse">
+										<div class="panel-body">
+											<form id="formAlerta">
+												<div class="col-sm-6">
+													<h6>Compañia Transportadora</h6>
+													<select id="idCarrier" name="idCarrier" data-toggle="tooltip"
+														data-placement="auto" required
+														title="Selecciona la Compañía Transportadora">
+														<option selected value="">Transportadora</option>
+														<option value="1">UPS</option>
+														<option value="2">Fedex</option>
+														<option value="5">DHL</option>
+														<option value="3">Amazon</option>
+														<option value="1006">Otros</option>
+													</select>
+
+												</div> <!-- end col -->
+
+												<div class="col-sm-6">
+													<h6>Número de Tracking</h6>
+													<input type="text" id="trackingNumber" name="trackingNumber"
+														value='' placeholder="#Tracking" data-toggle="tooltip"
+														data-placement="auto" title="entre 6 a 100 caracteres" required
+														maxlength="50" onchange="validarTrack()">
+
+												</div> <!-- end col -->
+												<div class="col-sm-6">
+													<h6>Selecciona el Destino</h6>
+													<select id="direcciones" name="direcciones" data-toggle="tooltip"
+														data-placement="auto" title="Selecciona la Dirección de Destino"
+														placeholder="Selecciona la Dirección de Destino" required>
+														<!-- envioIdLocation -->
+														<option value=''>Selecciona la Dirección de Destino </option>
+													</select>
+												</div> <!-- end col -->
+												<div class="col-sm-6">
+													<h6>Destinatarios</h6>
+													<input type="text" id="destinatario" name="destinatario"
+														maxlength="100" value='' placeholder="Destinatario"
+														data-toggle="tooltip" data-placement="auto"
+														title="Ingresa el nombre de destino" required>
+												</div> <!-- end col -->
+												<div class="col-sm-6">
+													<h6>Tipo de Categoria</h6>
+													<select id="posicionArancelaria" name="posicionArancelaria"
+														required="">
+														<option value="9807200000" selected>Otros envíos Urgentes
+														</option>
+														<option value="6114909000">Ropa</option>
+														<option value="8471300000">Tecnología</option>
+														<option value="8522905000">Otras categorias</option>
+													</select>
+												</div> <!-- end col -->
+												<div class="col-sm-6">
+													<h6>Descripción Productos</h6>
+													<input type="text" id="descripcion" name="descripcion" value=''
+														placeholder="Descripción del producto" data-toggle="tooltip"
+														data-placement="auto" required=""
+														title="Ingresa breve descripcion del producto">
+												</div> <!-- end col -->
+												<div class="col-sm-6">
+													<h6>Valor del Producto</h6>
+													<input class="form-control form-control-rounded form-control-sm"
+														type="number" placeholder="Valor USD" id="Valor" name="Valor"
+														value='' data-toggle="tooltip" data-placement="auto"
+														title="Valor del producto" required>
+												</div> <!-- end col -->
+												<div class="col-sm-6">
+													<h6>Adjuntar Factura</h6>
+													<div class="input-group">
+														<input class="hidden" type="file" id="ImageUrl"
+															onchange="validarExtencion()">
+														<div class="input-group input-file" name="Fichier1"></div>
+														<input id="fileName" type="text" class="form-control"
+															placeholder='Buscar factura de compra' />
+														<span class="input-group-btn">
+															<button class="btn btn-sm btn-color rounded"
+																style="padding: 10px;" type="button"
+																onclick="getFile()">Examinar</button>
+														</span>
+													</div>
+												</div> <!-- end col -->
+												<div class="col-sm-12">
+													<p> * Utilice archivos en formato: .gif, .jpg, .png para
+														adjuntar la
+														factura.<br />
+														* Utilice archivos con un tamaño NO superior a 1
+														MB.<br />
+														<b>*De no estar seguro de su factura por favor NO
+															adjunte el
+															archivo</b>
+														<br /><input type="button" class="specialbtn"
+															value="Eliminar Archivo" onclick="quitarArchivo()">
+													</p>
+												</div>
+												<div class="col-sm-12" style="display: grid;">
+													<input class="btn btn-md btn-blue rounded" type="submit"
+														style="width: auto;" value="Alertar Paquete"
+														onclick="grabarAlerta()" />
+												</div>
+											</form>
+										</div>
+									</div>
 								</div>
-								<div id="collapseFour" class="panel-collapse collapse">
-									<div class="panel-body">
-										       <form id="calculatorForm" onsubmit="calcularClick()">
-										           <div class="container">
-										               <div class="row">
-										                   <div class="col-md-9 section-columns mb-50">
-										                       <!-- 1/2 column -->
-										                       <div class="row">
-										                           <div class="col-sm-8">
-										                               <h6>Selecciona un Plan</h6>
-										                               <select>
-										                                   <option selected value="default">Select an option</option>
-										                                   <option value="green">Fast</option>
-										                                   <option value="black">Black</option>
-										                               </select>
-										                           </div>
-										                           <!-- end col -->
+								<div class="panel panel-default" id="calculo">
+									<div class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+											class="plus">Calcula tu Envío<span>&nbsp;</span>
+										</a>
+									</div>
+									<div id="collapseFive" class="panel-collapse collapse">
+										<div class="panel-body">
+											<form id="calculatorForm" onsubmit="calcularClick()">
+												<div class="container">
+													<div class="row">
+														<div class="col-md-9 section-columns mb-50">
+															<!-- Origen -->
+															<div class="row">
+																<div class="col-sm-6">
+																	<h6>ORIGEN</h6>
+																	<select name="idPaisOrigen" id="idPaisOrigen"
+																		required>
+																		<option selected value="default">País</option>
+																		<option value="1">USA</option>
+																		<option value="76">ESPAÑA</option>
+																		<option value="75">CHINA</option>
+																	</select>
+																</div>
+																<!-- end col -->
+																<div class="col-sm-5">
+																	<h6>DESTINO</h6>
+																	<select name="pais" id="pais" required=""
+																		onchange="cargaDept()"
+																		class="form-control form-control-rounded form-control-sm"
+																		data-toggle="tooltip" data-placement="auto"
+																		title=""
+																		data-original-title="Seleccione un País">
+																		<option selected value="">Seleccione País
+																		</option>
+																	</select>
+																	<select name="estado" id="estado" required=""
+																		onchange="cargaCiudades()"
+																		class="form-control form-control-rounded form-control-sm"
+																		data-toggle="tooltip" data-placement="auto"
+																		title=""
+																		data-original-title="Seleccione un Departamento o Estado">
+																		<option selected value="">Seleccione
+																			Departamento/Estado</option>
+																	</select>
+																	<select name="ciudad" id="ciudad" required=""
+																		class="form-control form-control-rounded form-control-sm"
+																		data-toggle="tooltip" data-placement="auto"
+																		title=""
+																		data-original-title="Seleccione una ciudad o provincia">
+																		<option selected value="">Seleccione
+																			Ciudad/Provincia</option>
+																	</select>
+																</div>
+																<!-- end col -->
+															</div>
+															<!-- end row -->
 
-										                           <!-- end col -->
-										                       </div>
-										                       <!-- end row -->
+															<!-- Costo -->
+															<div class="row">
+																<div class="col-sm-3">
+																	<h6>Moneda</h6>
+																	<select
+																		class="form-control form-control-rounded form-control-sm"
+																		id="moneda">
+																		<option>USD</option>
+																		<!--<option>COP</option>-->
+																	</select>
+																</div>
+																<!-- end col -->
 
-										                       <!-- Origen -->
-										                       <div class="row">
-										                           <div class="col-sm-6">
-										                               <h6>ORIGEN</h6>
-										                               <select name="pais" id="pais" required="" onchange="cargaDept()">
-										                                   <option selected value="default">País</option>
-										                                   <option value="green">USA</option>
-										                                   <option value="black">ESPAÑA</option>
-										                                   <option value="white">CHINA</option>
-										                               </select>
-										                           </div>
-										                           <!-- end col -->
+																<div class="col-sm-3">
+																	<h6>Valor declarado</h6>
+																	<input type="number" id="valorDeclarado" value=''
+																		placeholder="$ Declarado" data-toggle="tooltip"
+																		data-placement="auto"
+																		title="Ingrese Valor mayor a 0" step="any"
+																		required>
+																</div>
+																<!-- end col -->
 
-										                           <div class="col-sm-5">
-										                               <h6>DESTINO</h6>
-										                               <input name="ciudad" type="search" placeholder="Ciudad" />
-										                           </div>
-										                           <!-- end col -->
-										                       </div>
-										                       <!-- end row -->
+																<div class="col-sm-5">
+																	<h6>Descripción</h6>
+																	<input name="descripción " type="text"
+																		placeholder="Ejemplo:Calzado Dama" />
+																</div>
+																<!-- end col -->
+															</div>
+															<!-- end row -->
 
-										                       <!-- Costo -->
-										                       <div class="row">
-										                           <div class="col-sm-4">
-										                               <h6>COSTO DEL PRODUCTO</h6>
-										                               <input name="costo" type="number" placeholder="USD" />
-										                           </div>
-										                           <!-- end col -->
+															<!-- Detalles -->
+															<div class="row">
+																<div class="col-sm-4">
+																	<h6>Unidades peso</h6>
+																	<select id="tUnidad" value=''>
+																		<option value='LB'>Libras</option>
+																		<!--<option>kg</option>-->
+																	</select>
+																</div>
+																<!-- end col -->
 
-										                           <div class="col-sm-4">
-										                               <h6>Valor</h6>
-										                               <input name="costo" type="date" placeholder="$" />
-										                           </div>
-										                           <!-- end col -->
+																<div class="col-sm-3">
+																	<h6>Peso</h6>
+																	<input type="number" id='pesoTotal'
+																		data-toggle="tooltip" data-placement="auto"
+																		title="Ingrese Valor mayor a 0">
+																</div>
+																<!-- end col -->
 
-										                           <div class="col-sm-3">
-										                               <h6>Descripción</h6>
-										                               <input name="descripción " type="text" placeholder="Ejemplo:Calzado Dama" />
-										                           </div>
-										                           <!-- end col -->
-										                       </div>
-										                       <!-- end row -->
-
-										                       <!-- Detalles -->
-										                       <div class="row">
-										                           <div class="col-sm-4">
-										                               <h6>DETALLE DEL ENVÍO</h6>
-										                               <input name="costo" type="number" placeholder="USD" />
-										                           </div>
-										                           <!-- end col -->
-
-										                           <div class="col-sm-4">
-										                               <h6>Tipo de Peso</h6>
-										                               <input name="costo" type="date" placeholder="Libra" />
-										                           </div>
-										                           <!-- end col -->
-
-										                           <div class="col-sm-4">
-										                               <h6>Dimensiones Volumétricas</h6>
-										                               <input type="radio" class="input-radio" name="radio" id="radio3"
-										                                   value="radio3" />
-										                               <label for="radio3">Dimensiones</label>
-										                           </div>
-										                           <!-- end col -->
-										                       </div>
-										                       <!-- end row -->
-										                       <div class="col-sm-6">
-										                           <h6>CALCULAR TU ENVÍO</h6>
-										                           <a href="#" class="btn btn-md btn-stroke">CALCULAR</a>
-										                       </div>
-										                   </div>
-										                   <!-- end col -->
-										               </div>
-										               <!-- end row -->
-										           </div>
-										           <!-- end container -->
-										       </form>
+																<div class="col-sm-4">
+																	<h6>Dimensiones Volumétricas</h6>
+																	<input class="form-control form-control-rounded "
+																		type="checkbox" id='dimensionesVol'
+																		data-toggle="tooltip" data-placement="auto"
+																		title="Seleccione para Adicionar Dimensiones"
+																		onchange="mostrarVolumetricas(this.checked)">
+																</div>
+																<!-- end col -->
+															</div>
+															<div class="row" id="MuestroVol" style="display:none;">
+																<div class="col-sm-2">
+																	<div class="form-group">
+																		<label for="checkout-country"></br></label>
+																		<select class="form-control form-control-rounded form-control-sm"
+																			id='tDimension' value=''>
+																			<!--<option>Pulgadas</option>-->
+																			<option value='CM'>Centí</option>
+																		</select>
+																	</div>
+						
+																</div>
+																<div class="col-sm-2">
+																	<div class="form-group">
+																		<label for="checkout-ln"> </br> </label>
+																		<input class="form-control form-control-rounded form-control-sm"
+																			type="number" id='alto' value='' placeholder="Alto">
+																		<br />
+																	</div>
+																</div>
+						
+																<div class="col-sm-2">
+																	<div class="form-group">
+																		<label for="checkout-ln"> </br> </label>
+																		<input class="form-control form-control-rounded form-control-sm"
+																			type="text" id='largo' value='' placeholder="Largo">
+																	</div>
+																</div>
+						
+																<div class="col-sm-2">
+																	<div class="form-group">
+																		<label for="checkout-ln"> </br> </label>
+																		<input class="form-control form-control-rounded form-control-sm"
+																			type="text" id='ancho' value='' placeholder="Ancho">
+																	</div>
+																</div>
+															</div>
+															<!-- end row -->
+															<div class="col-sm-6">
+																<h6>CALCULAR TU ENVÍO</h6>
+																<a href="#" class="btn btn-md btn-stroke">CALCULAR</a>
+															</div>
+														</div>
+														<!-- end col -->
+													</div>
+													<!-- end row -->
+												</div>
+												<!-- end container -->
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
-					</div>
-				</section>
-				<!--End Consulta Alertas envios -->
+						</section>
+						<!--End Consulta Alertas envios -->
 
-						<h2 class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50" id="dir">Direcciones de Envío</h2>
+						<h2 class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50"
+							id="dir">Direcciones de Envío</h2>
 
 						<!-- Icon Boxes Style-2 -->
 						<div class="row icon-boxes style-2">
-                                <blockquote class="blockquote-style-2">
-                                    <p>
-                                       Utiliza las direcciónes correspondiente al país donde realizas tus compras online
-                                       en las tiendas virtuales como dirección de entrega. Asegurate de digitar en el
-                                       campo "segunda dirección" o al final de la primera dirección tu código suite,
-                                       este nos permitirá identificar de las compras que te pertenecen.
-                                    </p>
-                                </blockquote>
-						    <div class="col-md-4 mb-60">
-						        <div class="service-item-box">						                
-                                    <i class="icon-tools"></i>
-						         
-						            <h3>USA</h3>
-						            <p class="mb-0">2120 NW 96th Ave,
-						                Doral, Florida USA zip code 33172-2325</p>
-						        </div>
-						    </div> <!-- end service item -->
+							<blockquote class="blockquote-style-2">
+								<p>
+									Utiliza las direcciónes correspondiente al país donde realizas tus compras online
+									en las tiendas virtuales como dirección de entrega. Asegurate de digitar en el
+									campo "segunda dirección" o al final de la primera dirección tu código suite,
+									este nos permitirá identificar de las compras que te pertenecen.
+								</p>
+							</blockquote>
+							<div class="col-md-4 mb-60">
+								<div class="service-item-box">
+									<i class="icon-tools"></i>
 
-						    <div class="col-md-4 mb-60">
-						        <div class="service-item-box">
-						            
-						                <i class="icon-envelope"></i>
-						     
-						            <h3>ESPAÑA</h3>
-						            <p class="mb-0">Avenida las Americas 4 Nave B6 Código 28823, Madrid, España</p>
-						        </div>
-						    </div> <!-- end service item -->
+									<h3>USA</h3>
+									<p class="mb-0">2120 NW 96th Ave,
+										Doral, Florida USA zip code 33172-2325</p>
+								</div>
+							</div> <!-- end service item -->
 
-						    <div class="col-md-4 last">
-						        <div class="service-item-box">
-						      
-						                <i class="icon-mobile"></i>
-						     
-						            <h3>CHINA</h3>
-						            <p class="mb-0">A101 guanghua huo yun ground 2721th jichang road baiyun Guangzhou GUANGDONG China</p>
-						        </div>
-						    </div> <!-- end service item -->
-                        </div>
-                        <!-- Contact -->
-                        <section class="section-wrap-lg contact" id="contact">
-                            <div class="container">
-                        <h2 class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50">Contacto</h2>
+							<div class="col-md-4 mb-60">
+								<div class="service-item-box">
 
-                                <div class="row">
+									<i class="icon-envelope"></i>
 
-                                    <div class="col-md-4 mb-40">
-                                        <h5 class="uppercase">INFORMACIÓN</h5>
+									<h3>ESPAÑA</h3>
+									<p class="mb-0">Avenida las Americas 4 Nave B6 Código 28823, Madrid, España</p>
+								</div>
+							</div> <!-- end service item -->
 
-                                        <div class="contact-item">
-                                            <div class="contact-icon">
-                                                <i class="icon icon_house_alt"></i>
-                                            </div>
-                                            <p>Colombia<br>
-                                                Bogotá<br>
-                                                Cra. 70G #127A-25 OF 101</p>
-                                        </div> <!-- end address -->
+							<div class="col-md-4 last">
+								<div class="service-item-box">
 
-                                        <div class="contact-item">
-                                            <div class="contact-icon">
-                                                <i class="icon icon_mobile"></i>
-                                            </div>
-                                            <span>+57 3107972030 - +57 310 2350940 </span>
-                                        </div> <!-- end phone number -->
+									<i class="icon-mobile"></i>
 
-                                        <div class="contact-item">
-                                            <div class="contact-icon">
-                                                <i class="icon icon_mail_alt"></i>
-                                            </div>
-                                            <a href="mailto:afelasupport@gmail.com"
-                                                class="dark-link">contacto@courierexpress.com.co</a>
-                                        </div> <!-- end email -->
+									<h3>CHINA</h3>
+									<p class="mb-0">A101 guanghua huo yun ground 2721th jichang road baiyun Guangzhou
+										GUANGDONG China</p>
+								</div>
+							</div> <!-- end service item -->
+						</div>
+						<!-- Contact -->
+						<section class="section-wrap-lg contact" id="contact">
+							<div class="container">
+								<h2
+									class="heading relative heading-small uppercase bottom-line style-2 left-align mt-50">
+									Contacto</h2>
 
-                                    </div>
+								<div class="row">
 
-                                    <div class="col-md-4">
-                                        <form id="contact-form" action="#">
+									<div class="col-md-4 mb-40">
+										<h5 class="uppercase">INFORMACIÓN</h5>
 
-                                            <div class="row">
-                                                <div class="col-md-12 contact-name">
-                                                    <input name="name" id="name" type="text" placeholder="Nombre*">
-                                                </div>
-                                                <div class="col-md-12 contact-email">
-                                                    <input name="mail" id="mail" type="email" placeholder="E-mail*">
-                                                </div>
-                                            </div>
+										<div class="contact-item">
+											<div class="contact-icon">
+												<i class="icon icon_house_alt"></i>
+											</div>
+											<p>Colombia<br>
+												Bogotá<br>
+												Cra. 70G #127A-25 OF 101</p>
+										</div> <!-- end address -->
 
-                                            <textarea name="comment" id="comment" placeholder="Mensaje"
-                                                rows="9"></textarea>
+										<div class="contact-item">
+											<div class="contact-icon">
+												<i class="icon icon_mobile"></i>
+											</div>
+											<span>+57 3107972030 - +57 310 2350940 </span>
+										</div> <!-- end phone number -->
 
-                                            <input type="submit" class="btn btn-md btn-dark rounded btn-submit"
-                                                value="Envìar mensaje" id="submit-message">
-                                            <div id="msg" class="message"></div>
-                                        </form>
-                                    </div> <!-- end col -->
+										<div class="contact-item">
+											<div class="contact-icon">
+												<i class="icon icon_mail_alt"></i>
+											</div>
+											<a href="mailto:afelasupport@gmail.com"
+												class="dark-link">contacto@courierexpress.com.co</a>
+										</div> <!-- end email -->
 
-                                </div>
-                            </div>
-                        </section> <!-- end contact -->
+									</div>
+
+									<div class="col-md-4">
+										<form id="contact-form" action="#">
+
+											<div class="row">
+												<div class="col-md-12 contact-name">
+													<input name="name" id="name" type="text" placeholder="Nombre*">
+												</div>
+												<div class="col-md-12 contact-email">
+													<input name="mail" id="mail" type="email" placeholder="E-mail*">
+												</div>
+											</div>
+
+											<textarea name="comment" id="comment" placeholder="Mensaje"
+												rows="9"></textarea>
+
+											<input type="submit" class="btn btn-md btn-dark rounded btn-submit"
+												value="Envìar mensaje" id="submit-message">
+											<div id="msg" class="message"></div>
+										</form>
+									</div> <!-- end col -->
+
+								</div>
+							</div>
+						</section> <!-- end contact -->
 
 
-				
-					
-					
-		</div> <!-- end col total -->
+
+
+
+					</div> <!-- end col total -->
 
 					<!-- Sidebar -->
 					<aside class="col-md-3 sidebar">
 						<div class="widget categories">
 							<h3 class="widget-title">VER OTROS</h3>
 							<ul class="list-dividers">
-							<li><a data-scroll href="#">Datos</a></li>
-							<li><a data-scroll href="#paquete">Envíos Actuales</a></li>
-							<li><a data-scroll href="#paquete">Mis Alertas</a></li>
-							<li><a data-scroll href="#paquete">Alerta tu envío</a></li>
-                            <li><a data-scroll href="#paquete">Calculadora</a></li>
-                            <li><a data-scroll href="#dir">Direcciones</a></li>
-                            <li><a data-scroll href="#contact">Contacto</a></li>
-                            <li><a data-scroll href="planes.html" target="_blank">Planes</a>
-                            	</li>
+								<li><a data-scroll href="#">Datos</a></li>
+								<li><a data-scroll href="#paquete">Envíos Actuales</a></li>
+								<li><a data-scroll href="#paquete">Mis Alertas</a></li>
+								<li><a data-scroll href="#paquete">Alerta tu envío</a></li>
+								<li><a data-scroll href="#paquete">Calculadora</a></li>
+								<li><a data-scroll href="#dir">Direcciones</a></li>
+								<li><a data-scroll href="#contact">Contacto</a></li>
+								<li><a data-scroll href="planes.html" target="_blank">Planes</a>
+								</li>
 
 
-							<li></li>
+								<li></li>
 							</ul>
 						</div>
 					</aside>
 
 				</div> <!-- end row -->
 			</div> <!-- end container -->
-		</section> 
+		</section>
 		<!-- end Seccion Datos -->
 
 		<!-- Footer -->
-<footer class="footer footer-type-1">
+		<footer class="footer footer-type-1">
 			<div class="container">
 				<div class="footer-widgets">
 					<div class="row">
@@ -800,18 +924,24 @@
 							<div class="widget footer-about-us">
 								<h5 class="uppercase">CourierExpress</h5>
 								<p style="color: white;" class="mb-20"><strong>Asistencia de compras:</strong>
-									Si no tienes forma de hacer esta compra no hay ningún problema, te contactas con alguno de nuestros asesores y te ayudaremos a buscar un mejor precio, con una cotización gratuita, puedes contactar al teléfono: <strong>321 273 3038.</strong> <br>
+									Si no tienes forma de hacer esta compra no hay ningún problema, te contactas con
+									alguno de nuestros asesores y te ayudaremos a buscar un mejor precio, con una
+									cotización gratuita, puedes contactar al teléfono: <strong>321 273 3038.</strong>
+									<br>
 									<strong>Servicios especializados:</strong>
-									Transporte de Carga Área, Tramites Aduaneros y Tramites de Exportación, llámanos y te informamos</p>
+									Transporte de Carga Área, Tramites Aduaneros y Tramites de Exportación, llámanos y
+									te informamos</p>
 								<p style="color: white;">Mail-marketing:</p>
 								<form class="relative newsletter-form style-2">
 									<input type="email" class="newsletter-input" placeholder="e-mail">
 									<i class="icon_mail"></i>
-									<input type="submit" class="btn btn-md btn-dark newsletter-submit" value="Suscríbete">
+									<input type="submit" class="btn btn-md btn-dark newsletter-submit"
+										value="Suscríbete">
 								</form>
 
 							</div>
-						</div> <!-- end about us --> <!-- end about us -->				
+						</div> <!-- end about us -->
+						<!-- end about us -->
 
 						<div class="col-md-6 col-sm-6 col-xs-12">
 							<div class="widget footer-posts with-thumbs">
@@ -827,13 +957,17 @@
 													</a>
 												</div>
 												<div class="entry">
-													<h3 class="entry-title"><a href="magazine-single-article.html">Tiendas Online sólo para ellas.</a></h3>
+													<h3 class="entry-title"><a
+															href="magazine-single-article.html">Tiendas Online sólo para
+															ellas.</a></h3>
 													<ul class="entry-meta list-inline">
 														<li class="entry-date">
-															<a href="https://www.carolinaherrera.com/co/es/?gclid=EAIaIQobChMIpcCqg4yp5QIVjcDACh3AYAR3EAAYASAAEgILG_D_BwE " target="_blank">Para un gusto femenino.</a>
+															<a href="https://www.carolinaherrera.com/co/es/?gclid=EAIaIQobChMIpcCqg4yp5QIVjcDACh3AYAR3EAAYASAAEgILG_D_BwE "
+																target="_blank">Para un gusto femenino.</a>
 														</li>
 														<li class="entry-comments">
-															<i class="fa fa-comments"></i><a href="magazine-single-article.html">Visitanos</a>
+															<i class="fa fa-comments"></i><a
+																href="magazine-single-article.html">Visitanos</a>
 														</li>
 													</ul>
 												</div>
@@ -847,13 +981,17 @@
 													</a>
 												</div>
 												<div class="entry">
-													<h3 class="entry-title"><a href="magazine-single-article.html">Tiendas Online sólo para ellos.</a></h3>
+													<h3 class="entry-title"><a
+															href="magazine-single-article.html">Tiendas Online sólo para
+															ellos.</a></h3>
 													<ul class="entry-meta list-inline">
 														<li class="entry-date">
-															<a href="https://www.versace.com/international/en/home/" target="_blank">Para un gusto masculino.</a>
+															<a href="https://www.versace.com/international/en/home/"
+																target="_blank">Para un gusto masculino.</a>
 														</li>
 														<li class="entry-comments">
-															<i class="fa fa-comments"></i><a href="magazine-single-article.html">Visitanos</a>
+															<i class="fa fa-comments"></i><a
+																href="magazine-single-article.html">Visitanos</a>
 														</li>
 													</ul>
 												</div>
@@ -863,33 +1001,35 @@
 
 								</div>
 							</div>
-						</div> <!-- end recent posts --> <!-- end latest posts -->
+						</div> <!-- end recent posts -->
+						<!-- end latest posts -->
 					</div>
-				</div>		
+				</div>
 			</div> <!-- end container -->
 
-	<div class="bottom-footer">
+			<div class="bottom-footer">
 				<div class="container">
 					<div class="row">
 
 						<div class="col-md-4 col-xs-12 copyright">
 							<span>
-								© 2019  |  Por CourierExpress
+								© 2019 | Por CourierExpress
 							</span>
 						</div>
-							
+
 						<div class="col-md-3 col-xs-12 footer-socials mt-mdm-10 text-right">
 							<div class="social-icons dark">
 								<a href="#"><i class="fa fa-instagram"></i></a>
 								<a href="#"><i class="fa fa-facebook"></i></a>
-							
+
 							</div>
 						</div>
 
 					</div>
 				</div>
 			</div> <!-- end bottom footer -->
-		</footer> <!-- end footer --><!-- end footer -->
+		</footer> <!-- end footer -->
+		<!-- end footer -->
 
 		<div id="back-to-top">
 			<a href="#top"><i class="fa fa-angle-up"></i></a>
@@ -897,14 +1037,25 @@
 
 	</div> <!-- end main-wrapper -->
 
-	<!-- jQuery Scripts -->		
+	<!-- jQuery Scripts -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
 	<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
 	<script type="text/javascript" src="js/rev-slider.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/miCuenta.js"></script>
+	<script type="text/javascript" src="js/express.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/mc-alerta.js"></script>
+	<script type="text/javascript" src="js/getCiudades.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/calculadora.js"></script>
+	<script type="text/javascript" src="js/sweetalert.min.js"></script>
+
+	<!-- Validator -->
+	<script src="vendor/jquery.validate.js"></script>
 
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
@@ -1083,323 +1234,7 @@
 			</div>
 		</div>
 	</div>
-	<!--FIN MODAL CONTRATO-->
-</html>
 
-		<!--INICIO MOSTRAR CONTRASEÑ REGISTRO-->
-		<script>
-		    function cerrarsesion() {
-		        fivepaq.logOut();
-		        location.href = "../index.html";
-		    }
-		    var dataout = fivepaq.dataOut();
-
-		    if (dataout == null || dataout.L !== true) {
-		        location.href = "";
-		    }
-
-		    function mostrarPlan() {
-		        var cuenta = dataout.N;
-		        var expression = /PL|BL|TL\b/g;
-		        var result = cuenta.match(expression);
-		        console.log(result[0]);
-		        if (result[0] == "PL") {
-		            document.getElementById("idplan").innerText = "PYMEBOX BOXLUXURY";
-		        } else {
-		            if (result[0] == "BL") {
-		                document.getElementById("idplan").innerText = "BOLUXURY STANDART";
-		            } else {
-		                if (result[0] == "TL") {
-		                    document.getElementById("idplan").innerText = "BOLUXURY CLUB";
-		                }
-		            }
-		        }
-		    }
-		    mostrarPlan();
-		    $("#nomUsuario").html(dataout.U); //este es el campo del usuario
-		    $("#emailUsuario").html(dataout.E); //este es el campo del Email
-		    $("#numCasillero").html(dataout.N); //Este es campo del casillero
-		    $("#telefonoUsuario").html(dataout.Tel); //Este es campo del telefono
-        </script>
-        
-	<!-- cerrar cuenta -->
-	<script type="text/javascript">
-	    function cerrarsesion() {
-	        fivepaq.logOut();
-	        location.href = "index.html";
-	    }
-	    var dataout = fivepaq.dataOut();
-
-	    if (dataout == null || dataout.L !== true) {
-	        location.href = "index.html";
-	    }
-
-	    $("#nomUsuario").html(dataout.U); //este es el campo del usuario
-	    $("#emailUsuario").html(dataout.E); //este es el campo del Email
-	    $("#numCasillero").html(dataout.N); //Este es campo del casillero
-	    $("#telefonoUsuario").html(dataout.Tel); //Este es campo del telefono
-	</script>
-	<!--fin  cerrar cuenta -->
-	<script>
-	    function DireccionesOk(data) {
-	        // $('#direcciones').append('<option value='' selected>Selecciona la Dirección de Destino</option>')
-	        $.each(data, function (i, item) {
-	            $('#direcciones').append(
-
-	                '<option value="' + data[i].idLocation + '">' + data[i].direccion + '</option>'
-	            )
-
-	        });
-
-	    }
-
-	    function validarTrack() {
-	        debugger;
-	        var tracking = $('#trackingNumber').val();
-	        if (tracking.length < 6) {
-
-	            $('#trackingNumber').focus();
-
-	            return false;
-	        } else
-	        if (tracking.length > 100) {
-
-	            $('#trackingNumber').focus();
-	            return false;
-	        } else {
-	            return true;
-	        }
-	    }
-
-	    function validarAlerta() {
-
-
-	        if ($('#idCarrier').val() == "") {
-	            $('#idCarrier').focus();
-
-	            return false;
-	        } else
-	        if (!validarTrack()) {
-
-	            $('#trackingNumber').focus();
-	            Swal.fire(
-	                'el Tracking!',
-	                'Debe estar entre 6 a 100 digitos',
-	                'error'
-	            )
-
-	            return false;
-	        } else
-	        if ($('#direcciones').val() == "") {
-	            $('#direcciones').focus();
-
-	            return false;
-	        } else
-	        if ($('#destinatario').val() == "") {
-	            $('#destinatario').focus();
-
-	            return false;
-	        } else
-	        if ($('#posicionArancelaria').val() == "") {
-	            $('#posicionArancelaria').focus();
-
-	            return false;
-	        } else
-	        if ($('#descripcion').val() == "") {
-	            $('#descripcion').focus();
-
-	            return false;
-	        } else
-	        if ($('#Valor').val() < 0.01) {
-	            $('#Valor').focus();
-	            return false;
-	        }
-	        return true;
-	    }
-
-	    function limpiarAlerta() {
-	        $('#idCarrier').val('');
-	        $('#trackingNumber').val('');
-	        $('#direcciones').val('');
-	        $('#destinatario').val('');
-	        $('#posicionArancelaria').val('');
-	        $('#descripcion').val('');
-	        $('#Valor').val('');
-	        $('#fileName').attr("placeholder", "Choose a file... ")
-	    }
-
-	    function quitarArchivo() {
-	        $('#ImageUrl').val('');
-	        document.getElementById("fileName").setAttribute("placeholder", "Choose a file...");
-	    }
-
-	    function validarExtencion() {
-	        var fileInput = (document.getElementById('ImageUrl')).value;
-	        var fileName = document.getElementById('ImageUrl').files[0].name;
-	        var extPermitidas = /(.jpg|.png|.jpeg|.gif|.pdf)$/i;
-	        if (!extPermitidas.exec(fileInput)) {
-	            console.log('Extension invalida')
-	            Swal.fire({
-	                title: 'Extension invalida!',
-	                text: 'Valida que el archivo sea extension .jpg, .png, .gif, .pdf',
-	                icon: 'error',
-	                confirmButtonText: 'Ok',
-	                type: 'error'
-	            })
-	        } else {
-
-	        }
-	        document.getElementById("fileName").setAttribute("placeholder", fileName);
-	    }
-
-	    function grabarClick() {
-	        debugger;
-	        $('form[id="formAlerta"]').validate({
-
-	            rules: {
-	                idCarrier: {
-	                    required: true,
-	                },
-	                trackingNumber: {
-	                    required: true,
-	                    minlength: 6
-	                },
-	                direcciones: {
-	                    required: true,
-	                },
-	                posicionArancelaria: {
-	                    required: true,
-	                },
-	                descripcion: {
-	                    required: true,
-	                },
-	                Valor: {
-	                    required: true,
-	                }
-	            },
-	            messages: {
-	                idCarrier: 'El campo es requerido',
-	                trackingNumber: 'Campo requerido minimo 6 caracteres',
-	                direcciones: 'Selecciona una direccion',
-	                posicionArancelaria: 'Ingrese un teléfono valido',
-	                descripcion: 'Ingresa una pequeña descripción',
-	                Valor: 'El campo es requerido',
-
-	            },
-	            submitHandler: function (form) {
-	                var dataout = JSON.parse(sessionStorage.getItem('appData'));
-	                var fil = JSON.parse(sessionStorage.getItem('file'));
-	                console.log(fil);
-	                var datos = {
-	                    clientID: dataout.C,
-	                    trackingNumber: $("#trackingNumber").val(),
-	                    idCarrier: $("#idCarrier").val(),
-	                    idLocation: $("#direcciones").val(),
-	                    destinatario: $("#destinatario").val(),
-	                    TariffCode: $("#posicionArancelaria").val(),
-	                    description: $("#descripcion").val(),
-	                    value: $("#Valor").val().replace(",", ".")
-
-	                };
-
-	                if (document.getElementById('ImageUrl').value == "") {
-	                    fivepaq.prealertaValue(datos.clientID,
-	                        datos.trackingNumber, datos.idCarrier, datos.idLocation, datos.TariffCode,
-	                        datos.description, datos.value);
-
-	                } else {
-
-	                    fivepaq.prealertaImage(datos.clientID,
-	                        datos.trackingNumber, datos.idCarrier, datos.idLocation, datos.TariffCode,
-	                        datos.description);
-	                }
-	            }
-	        });
-	        $.validator.addMethod(
-	            "regex",
-	            function (value, element, regexp) {
-	                var re = new RegExp(regexp);
-	                return this.optional(element) || re.test(value);
-	            },
-	            "Please check your input."
-	        );
-	    }
-
-	    function getFile() {
-	        document.getElementById("ImageUrl").click();
-	    }
-
-	    function AlertSuccessImage(response) {
-	        /* AlertSuccessValue */
-	        limpiarAlerta();
-	        Swal.fire(
-	            '¡Se Alerto tu paquete! \n Con el Numero: ' + response.PreAlertId + ' ¡Guardalo!',
-	            '¡Nosotros nos encargamos!',
-	            'success'
-	        );
-	    }
-
-	    function AlertSuccessValue(response) {
-	        limpiarAlerta();
-	        Swal.fire(
-	            '¡Se Alerto tu paquete! \n Con el Numero: ' + response.PreAlertId + ' ¡Guardalo!',
-	            '¡Nosotros nos encargamos!',
-	            'success'
-	        );
-
-	    }
-	</script>
-	<script>
-	    fivepaq.cargarDireccionesCliente();
-    </script>
-   
-   <script>
-       /* smoot */
-	   var scroll = new SmoothScroll('a[href*="#"]', {
-	   speed: 1500
-	   });
-    </script>
-    <!-- Javascript -->
- <!-- cambio pasword -->
-    <script>
-        function cambioPass() {
-            debugger
-
-            $('form[id="cambioContrasena"]').validate({
-                rules: {
-                    OldPassword: {
-                        required: true,
-                        maxlength: 50,
-                    },
-                    NewPassword: {
-                        required: true,
-                        maxlength: 50,
-                    },
-                    ConfirmPassword: {
-                        required: true,
-                        maxlength: 50,
-                        equalTo: "#NewPassword",
-                    }
-                },
-                messages: {
-                    OldPassword: 'El campo es requerido',
-                    NewPassword: 'Contraseña minimo 6 caracteres'
-
-                },
-                submitHandler: function (form) {
-                    var datos = {
-                        OldPassword: $("#OldPassword").val(),
-                        NewPassword: $("#NewPassword").val(),
-                        ConfirmPassword: $("#ConfirmPassword").val(),
-                    }
-                    fivepaq.changePass(datos.OldPassword, datos.NewPassword);
-
-                }
-            });
-
-
-
-        }
-    </script>
 </body>
+
 </html>

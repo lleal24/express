@@ -20,7 +20,7 @@ var fivepaq = {
 
 		var ajaxObj = {
 			type: 'POST',
-			url: "https://fpaqtest.azurewebsites.net/api/auth",
+			url: "https://fpaq.azurewebsites.net/api/auth",
 			contentType: 'application/json; charset=utf-8',
 			data: JSON.stringify(datos)
 		};
@@ -47,7 +47,7 @@ var fivepaq = {
 	},
 
 	cargarDataUser: function (dataIn, LoginOk, LoginFail) {
-		var infUrl = `https://fpaqtest.azurewebsites.net/api/auth/userinfo/${dataIn.E}`;
+		var infUrl = `https://fpaq.azurewebsites.net/api/auth/userinfo/${dataIn.E}`;
 
 		var ajaxObj = {
 			type: 'GET',
@@ -102,7 +102,7 @@ var fivepaq = {
 	},
 
 	cargarCarriers: function (CarriersOk, CarriersFail) {
-		var infUrl = "https://fpaqtest.azurewebsites.net/api/carriers";
+		var infUrl = "https://fpaq.azurewebsites.net/api/carriers";
 		var dataIn = fivepaq.dataOut();
 
 		var ajaxObj = {
@@ -128,7 +128,7 @@ var fivepaq = {
 	cargarDireccionesCliente: function () {
 		var dataIn = fivepaq.dataOut();
 		debugger;
-		var infUrl = `https://fpaqtest.azurewebsites.net/api/locations/${dataIn.C}`;
+		var infUrl = `https://fpaq.azurewebsites.net/api/locations/${dataIn.C}`;
 
 		var ajaxObj = {
 			type: 'GET',
@@ -169,7 +169,7 @@ var fivepaq = {
 		} 
 
 		$.ajax({
-			url: "https://fpaqtest.azurewebsites.net/api/cuentas",
+			url: "https://fpaq.azurewebsites.net/api/cuentas",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Cuenta),
@@ -186,7 +186,7 @@ var fivepaq = {
 
 		var ajaxObj = {
 			type: 'GET',
-			url: "https://fpaqtest.azurewebsites.net/api/Ciudades/",
+			url: "https://fpaq.azurewebsites.net/api/Ciudades/",
 			contentType: 'application/json; charset=utf-8'
 		};
 
@@ -234,7 +234,7 @@ var fivepaq = {
 		Datos.NewPassword = NewPassword;
 
 		var ajaxObj = {
-			url: "https://fpaqtest.azurewebsites.net/api/Cuentas/ChangePassword",
+			url: "https://fpaq.azurewebsites.net/api/Cuentas/ChangePassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -245,14 +245,14 @@ var fivepaq = {
 				console.log(result);
 				sessionStorage.removeItem("appData");
 				debugger;
-				Swal.fire({
+				swal({
 					title: '¡Se  ha cambiado tu contraseña.!',
 					text: "Por favor inicia sesión nuevamente",
 					type: 'success',
 					confirmButtonText: 'Ok',
 					allowOutsideClick: false,
 				}).then((result) => {
-					location.href = "http://luxury.fivepaq.com/"
+					location.href = "index.html"
 					/* location.href = "../index.html" */
 					/* 	if (result.value) {
 							debugger;
@@ -265,7 +265,7 @@ var fivepaq = {
 				console.log("sadRequest");
 				console.log(jqXHR);
 				console.log(textStatus);
-				Swal.fire({
+				swal({
 					title: '¡Algo paso!',
 					text: "Revisa tu contraseña actual",
 					type: 'error',
@@ -279,7 +279,7 @@ var fivepaq = {
 		Datos = new Object();
 		Datos.Email = Email;
 		var ajaxObj = {
-			url: "https://fpaqtest.azurewebsites.net/api/cuentas/forgotpassword",
+			url: "https://fpaq.azurewebsites.net/api/cuentas/forgotpassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -326,7 +326,7 @@ var fivepaq = {
 		Datos.ConfirmPassword = ConfirmPassword;
 		Datos.Code = Code;
 		var ajaxObj = {
-			url: "https://fpaqtest.azurewebsites.net/api/cuentas/resetpassword",
+			url: "https://fpaq.azurewebsites.net/api/cuentas/resetpassword",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Datos)
@@ -381,7 +381,7 @@ var fivepaq = {
 		formData.append('TariffCode', TariffCode);
 
 		$.ajax({
-			url: "https://fpaqtest.azurewebsites.net/api/PreAlerts/CreatePrealertWithImageAsync",
+			url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithImageAsync",
 			type: 'POST',
 			contentType: false,
 			processData: false,
@@ -418,7 +418,7 @@ var fivepaq = {
 		Alerta.idLocation = idLocation;
 		Alerta.TariffCode = TariffCode;
 		$.ajax({
-			url: "https://fpaqtest.azurewebsites.net/api/PreAlerts/CreatePrealertWithValueAsync",
+			url: "https://fpaq.azurewebsites.net/api/PreAlerts/CreatePrealertWithValueAsync",
 			type: 'POST',
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Alerta),

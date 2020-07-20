@@ -221,93 +221,122 @@
 
 									<!-- tab content -->
 									<div class="tab-content">
+										<form id="cambioContrasena">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label>Actual</label>
+													<div class="form-group ojo">
+														<input type="password" class="form-control" id="OldPassword"
+															name="OldPassword" placeholder="Actual Contraseña"
+															required="" data-toggle="tooltip" data-placement="bottom"
+															title="" data-original-title="Ingresa contraseña actual">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label> Nueva</label>
+													<div class="form-group ojo">
+														<input type="password" class="form-control"
+															placeholder="Nueva Contraseña" id="NewPassword"
+															name="NewPassword" data-toggle="tooltip"
+															data-placement="bottom" title=""
+															data-original-title="La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label>Confirmar</label>
+													<div class="form-group ojo">
+														<input type="password" class="form-control"
+															placeholder="Confirmar" id="ConfirmPassword" required
+															name="ConfirmPassword">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<button class="btn btn-primary" type="submit"
+													onclick="cambioPass()">Guardar Nueva</button>
+												<div id="mensajeLogin"></div>
+											</div>
+										</form>
 
-										<div class="tab-pane fade in active" id="tab-four">
-											<p>
-												<label for="input-label">Nueva Contraseña</label>
-												<input name="password" id="password" type="password"
-													placeholder="Nueva Contraseña">
-											</p>
-
-											<p>
-												<label for="input-label">Confirmar</label>
-												<input name="password" id="password" type="password"
-													placeholder="Confirmar Contraseña">
-											</p>
-											<button class="btn btn-sm btn-color rounded newsletter-submit" type="submit"
-												onclick="cambioPass()">Guardar
-												Nueva</button>
-											<div id="mensajeLogin"></div>
-
-										</div>
 
 										<div class="tab-pane fade" id="tab-five">
 											<p>
-											<h5>Multidirecciones</h5>
-											<p>Puesdes agregar las direcciones de destino de tus envíos o compras</p>
+												<h5>Multidirecciones</h5>
+												<p>Puesdes agregar las direcciones de destino de tus envíos o compras
+												</p>
 
-											<!-- Button trigger modal -->
-											<a href="#" class="btn btn-md btn-dark mt-10" data-toggle="modal"
-												data-target="#myModal">Nueva Dirección</a>
+												<!-- Button trigger modal -->
+												<a href="#" class="btn btn-md btn-dark mt-10" data-toggle="modal"
+													data-target="#myModal">Nueva Dirección</a>
 
-											<!-- Modal -->
-											<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-												aria-labelledby="myModalLabel">
-												<div class="modal-dialog" role="document">
-													<div class="modal-content">
-														<div class="modal-header">
-															<button type="button" class="close" data-dismiss="modal"
-																aria-label="Close"><span
-																	aria-hidden="true">&times;</span></button>
-															<h4 class="modal-title" id="myModalLabel">Agregar Dirección
-																de entrega</h4>
+												<!-- Modal -->
+												<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+													aria-labelledby="myModalLabel">
+													<div class="modal-dialog" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal"
+																	aria-label="Close"><span
+																		aria-hidden="true">&times;</span></button>
+																<h4 class="modal-title" id="myModalLabel">Agregar
+																	Dirección
+																	de entrega</h4>
+															</div>
+															<div class="modal-body">
+																<ul>
+																	<li>
+																		<label for="input-label">Direcció de
+																			destino</label>
+																		<input name="name" id="input-label" type="text"
+																			placeholder="Ejemplo: Casa-oficina-amigo">
+																	</li>
+																	<li>
+																		<label for="input-label">Nombre del
+																			destinatarios</label>
+																		<input name="name" id="input-label" type="text"
+																			placeholder="Ejemplo: Nombre familiar,amigo etc">
+																	</li>
+																	<li>
+																		<label for="input-label">Dirección</label>
+																		<input name="name" id="input-label"
+																			type="number"
+																			placeholder="Dirección del envio">
+																	</li>
+																	<li>
+																		<label for="input-label">Codigo Postal</label>
+																		<input name="name" id="input-label"
+																			type="number"
+																			placeholder="Ejemplo: Bogotá 110111">
+																	</li>
+																	<li>
+																		<label for="input-label">Ciudad de
+																			Destino</label>
+
+																		<select>
+																			<option selected value="default">Ciudad
+																			</option>
+																			<option value="green">Cali</option>
+																			<option value="black">Medellin</option>
+																			<option value="white">Barranquilla</option>
+																		</select>
+
+																	</li>
+																</ul>
+															</div>
+
+															<div class="modal-footer">
+																<a class="btn btn-md btn-light"
+																	data-dismiss="modal">Cerrar</a>
+																<a class="btn btn-md btn-color">Salvar Dirección</a>
+															</div>
+
 														</div>
-														<div class="modal-body">
-															<ul>
-																<li>
-																	<label for="input-label">Direcció de destino</label>
-																	<input name="name" id="input-label" type="text"
-																		placeholder="Ejemplo: Casa-oficina-amigo">
-																</li>
-																<li>
-																	<label for="input-label">Nombre del
-																		destinatarios</label>
-																	<input name="name" id="input-label" type="text"
-																		placeholder="Ejemplo: Nombre familiar,amigo etc">
-																</li>
-																<li>
-																	<label for="input-label">Dirección</label>
-																	<input name="name" id="input-label" type="number"
-																		placeholder="Dirección del envio">
-																</li>
-																<li>
-																	<label for="input-label">Codigo Postal</label>
-																	<input name="name" id="input-label" type="number"
-																		placeholder="Ejemplo: Bogotá 110111">
-																</li>
-																<li>
-																	<label for="input-label">Ciudad de Destino</label>
-
-																	<select>
-																		<option selected value="default">Ciudad</option>
-																		<option value="green">Cali</option>
-																		<option value="black">Medellin</option>
-																		<option value="white">Barranquilla</option>
-																	</select>
-
-																</li>
-															</ul>
-														</div>
-
-														<div class="modal-footer">
-															<a class="btn btn-md btn-light"
-																data-dismiss="modal">Cerrar</a>
-															<a class="btn btn-md btn-color">Salvar Dirección</a>
-														</div>
-
 													</div>
-												</div>
-											</div> <!-- end modal -->
+												</div> <!-- end modal -->
 											</p>
 										</div>
 										<div class="tab-pane fade" id="tab-six">
@@ -618,8 +647,7 @@
 																	<h6>ORIGEN</h6>
 																	<select name="idPaisOrigen" id="idPaisOrigen"
 																		required>
-																		<option selected value="default">País</option>
-																		<option value="1">USA</option>
+																		<option value="1" selected>USA</option>
 																		<option value="76">ESPAÑA</option>
 																		<option value="75">CHINA</option>
 																	</select>
@@ -723,44 +751,105 @@
 																<div class="col-sm-2">
 																	<div class="form-group">
 																		<label for="checkout-country"></br></label>
-																		<select class="form-control form-control-rounded form-control-sm"
+																		<select
+																			class="form-control form-control-rounded form-control-sm"
 																			id='tDimension' value=''>
 																			<!--<option>Pulgadas</option>-->
 																			<option value='CM'>Centí</option>
 																		</select>
 																	</div>
-						
+
 																</div>
 																<div class="col-sm-2">
 																	<div class="form-group">
 																		<label for="checkout-ln"> </br> </label>
-																		<input class="form-control form-control-rounded form-control-sm"
-																			type="number" id='alto' value='' placeholder="Alto">
+																		<input
+																			class="form-control form-control-rounded form-control-sm"
+																			type="number" id='alto' value=''
+																			placeholder="Alto">
 																		<br />
 																	</div>
 																</div>
-						
+
 																<div class="col-sm-2">
 																	<div class="form-group">
 																		<label for="checkout-ln"> </br> </label>
-																		<input class="form-control form-control-rounded form-control-sm"
-																			type="text" id='largo' value='' placeholder="Largo">
+																		<input
+																			class="form-control form-control-rounded form-control-sm"
+																			type="text" id='largo' value=''
+																			placeholder="Largo">
 																	</div>
 																</div>
-						
+
 																<div class="col-sm-2">
 																	<div class="form-group">
 																		<label for="checkout-ln"> </br> </label>
-																		<input class="form-control form-control-rounded form-control-sm"
-																			type="text" id='ancho' value='' placeholder="Ancho">
+																		<input
+																			class="form-control form-control-rounded form-control-sm"
+																			type="text" id='ancho' value=''
+																			placeholder="Ancho">
 																	</div>
 																</div>
 															</div>
 															<!-- end row -->
 															<div class="col-sm-6">
 																<h6>CALCULAR TU ENVÍO</h6>
-																<a href="#" class="btn btn-md btn-stroke">CALCULAR</a>
+																<button class="btn btn-primary margin-bottom-none"
+																	onclick="">Calcular</button>
 															</div>
+														</div>
+														<div class="col-xl-12 col-lg-12" id="estimacion">
+															<aside class="sidebar">
+																<div class="gap-10"></div>
+
+																<h3 class="widget-title">Estimación de Costos</h3>
+																<table class="table">
+																	<tr>
+																		<td>Flete Estimado: </td>
+																		<td class="text-medium" id="lbflete"> </td>
+																	</tr>
+																	<tr>
+																		<td>Seguro: </td>
+																		<td class="text-medium" id="lbseguro"> </td>
+																	</tr>
+																	<tr>
+																		<td>Arancel: </td>
+																		<td class="text-medium" id="lbarancel"> </td>
+																	</tr>
+																	<tr>
+																		<td>IVA: </td>
+																		<td class="text-medium" id="lbiva"> </td>
+																	</tr>
+																	<tr>
+																		<td>Valor Total en USD </td>
+																		<td class="text-lg text-medium" id="lbTOTAL">
+																		</td>
+																	</tr>
+																</table>
+																<!-- </section><br /><br /> -->
+																<!-- Featured Products Widget-->
+																<section class="widget widget-featured-products">
+																	<h3 class="widget-title">¿Cómo funciona el cálculo?
+																	</h3>
+																	<!-- Entry-->
+																	<!-- <div class="entry"> -->
+																	<div class="entry">
+																		<p>La calculadora dará un costo aproximado de
+																			los envíos puestos en
+																			el
+																			país
+																			de
+																			destino con base en los
+																			datos suministrados.
+																			<br /><br />Este valor podrá variar por la
+																			fluctuación de la
+																			tasa
+																			representativa de cambio (TRM) a
+																			la fecha de recibido de tu paquete o
+																			mercancía. <br />
+																	</div>
+																</section>
+															</aside>
 														</div>
 														<!-- end col -->
 													</div>
@@ -1038,7 +1127,7 @@
 	</div> <!-- end main-wrapper -->
 
 	<!-- jQuery Scripts -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -1049,9 +1138,10 @@
 	<script type="text/javascript" src="js/express.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/mc-alerta.js"></script>
-	<script type="text/javascript" src="js/getCiudades.js"></script>
 	<script type="text/javascript" src="js/moment.js"></script>
-	<script type="text/javascript" src="js/calculadora.js"></script>
+	<script type="text/javascript" src="js/calculadoraInterna.js"></script>
+	<script type="text/javascript" src="js/cambioPassword.js"></script>
+	<script type="text/javascript" src="js/getCiudades.js"></script>
 	<script type="text/javascript" src="js/sweetalert.min.js"></script>
 
 	<!-- Validator -->

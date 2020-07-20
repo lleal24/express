@@ -1,6 +1,6 @@
-const paqBaseUrlActuales = "https://fpaqtest.azurewebsites.net/api/packages/";
-const paqBaseUrlHistorico = "https://fpaqtest.azurewebsites.net/api/packages/";
-const paqBaseUrlAlertas = "https://fpaqtest.azurewebsites.net/api/PreAlerts/GetCurrentPrealertsByClient/";
+const paqBaseUrlActuales = "https://fpaq.azurewebsites.net/api/packages/";
+const paqBaseUrlHistorico = "https://fpaq.azurewebsites.net/api/packages/";
+const paqBaseUrlAlertas = "https://fpaq.azurewebsites.net/api/PreAlerts/GetCurrentPrealertsByClient/";
 
 window.onload = callData;
 

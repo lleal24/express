@@ -1,8 +1,14 @@
+/* OBTENER CONVENIO */
+function obtenerConvenio() {
+    let data = JSON.parse(sessionStorage.getItem('appData'));
+    let convenioId = data.Con;
+    return convenioId;
+}
+
 /* VALIDACION DE CONVENIO */
 function validarConvenio() {
-    //var convenio = sessionStorage.getItem('appData');
-    let convenio = $('#idConvenio').val();
-    if (convenio == null || convenio == "") {
+    let convenio = sessionStorage.getItem('appData');
+    if (convenio == null && convenio == "") {
         swal("¡ha ocurrido un error! ", "Selecciona un Plan", "error");
         $('#idConvenio').focus();
         return false;
@@ -61,12 +67,12 @@ function validarDimensiones() {
 
 /* GENERAR URL */
 function getUrlCalculadora() {
-    let data = sessionStorage.getItem('appDataCon');
     validarDimensiones();
     let urlCiudades = "https://fpaq.azurewebsites.net/api/calculators/";
     let tipoCiudad = getTipoCiudad();
+    let convenio = obtenerConvenio();
     urlCiudades += tipoCiudad + "/";
-    urlCiudades += data + "/";
+    urlCiudades += convenio + "/";
     urlCiudades += $("#idPaisOrigen").val() + "/";
     urlCiudades += $("#tUnidad").val() + "/";
     urlCiudades += $("#tDimension").val() + "/";
@@ -79,16 +85,6 @@ function getUrlCalculadora() {
     urlCiudades += $("#alto").val() + "/";
 
     return urlCiudades;
-}
-
-function mostrarVolumetricas(checked) {
-    if (checked == true) {
-        divC = document.getElementById("MuestroVol");
-        divC.style.display = "";
-    } else {
-        divC = document.getElementById("MuestroVol");
-        divC.style.display = "none";
-    }
 }
 
 function limpiarCalculadora() {
@@ -112,7 +108,16 @@ function limpiarClick() {
     $("#lbiva").text("");
     $("#lbTOTAL").text("");
 }
+function mostrarVolumetricas(checked) {
+    if (checked == true) {
+        divC = document.getElementById("MuestroVol");
+        divC.style.display = "";
+    } else {
+        divC = document.getElementById("MuestroVol");
+        divC.style.display = "none";
 
+    }
+}
 function CalculadoraResult(request) {
     $("#lbflete").text("USD$ " + String(request.ValorFlete));
     $("#lbseguro").text("USD$ " + String(request.ValorSeguro));
@@ -149,13 +154,3 @@ async function calcularClick() {
 
 }
 
-function mostrarVolumetricas(checked) {
-    if (checked == true) {
-        divC = document.getElementById("MuestroVol");
-        divC.style.display = "";
-    } else {
-        divC = document.getElementById("MuestroVol");
-        divC.style.display = "none";
-
-    }
-}

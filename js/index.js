@@ -135,10 +135,11 @@ function grabarClick() {
             var re = new RegExp(regexp);
             return this.optional(element) || re.test(value);
         },
-        "Please check your input."
+        "El campo no cumple con los requisitos minimos"
     );
     $("#telefono").rules("add", { regex: "^\\d{1,20}$" })
     $("#cpostal").rules("add", { regex: "^\\d{1,10}$" })
+    $("#passwordRegistro").rules("add", { regex: "^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"})
 }
 
 function getUrlTicket() {

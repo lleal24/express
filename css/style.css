@@ -6923,5 +6923,14 @@ color: white;
   position: relative;
   display: block; 
   z-index: 2;
+}
 
+/* Ver contraseña */
+.ojo{position: relative} 
+.ojo .ptxt { position: absolute; top: 30%; right: 10px; z-index: 1; color: #10204a; margin-top: -10px; cursor: pointer; transition: .3s ease all; } 
+.ojo .ptxt:hover{color: #e91b43;} 
+/*ver contraseña */
+
+.form-group {
+  margin-bottom: 30px;
 }

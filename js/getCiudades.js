@@ -6,7 +6,7 @@ function callService() {
 }
 async function getCiudades() {
     try {
-        sessionStorage.setItem('appData', '25')
+        sessionStorage.setItem('appDataCon', '25')
         let req = await fetch(urlCiudades);
         if (req.status === 200) {
             let data = await req.json();

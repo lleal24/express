@@ -1,4 +1,9 @@
 /* VALIDACION DE CONVENIO */
+function enviarConvenio(){
+    let convenio = $('#idConvenio').val();
+    sessionStorage.setItem('appDataCon', convenio);
+}
+
 function validarConvenio() {
     //var convenio = sessionStorage.getItem('appData');
     let convenio = $('#idConvenio').val();

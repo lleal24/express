@@ -1,5 +1,5 @@
 function DireccionesOk(data) {
-    // $('#direcciones').append('<option value='' selected>Selecciona la Dirección de Destino</option>')
+    //$('#direcciones').append('<option value='' selected>Selecciona la Dirección de Destino</option>')
     $.each(data, function (i, item) {
         $('#direcciones').append(
 

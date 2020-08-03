@@ -85,6 +85,10 @@ function grabarClick() {
                 maxlength: 50,
                 minlength: 5
             },
+            passwordRegistroConfirm: {
+                required: true,
+                equalTo: "#passwordRegistro",
+            },
             accountTipoIdentificacion: {
                 required: true,
             },
@@ -106,7 +110,7 @@ function grabarClick() {
             tipoDoc: 'El campo es requerido',
             documento: 'El campo es requerido',
             cpostal: 'El campo es requerido',
-            passwordRegistro: 'Contraseña minimo 6 caracteres',
+            //passwordRegistro: 'La contraseña no cumple con los requisitos',
             "checkbox[]": 'Valide las condiciones'
 
         },
@@ -139,7 +143,7 @@ function grabarClick() {
     );
     $("#telefono").rules("add", { regex: "^\\d{1,20}$" })
     $("#cpostal").rules("add", { regex: "^\\d{1,10}$" })
-    $("#passwordRegistro").rules("add", { regex: "^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"})
+    $("#passwordRegistro").rules("add", { regex: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{6,16}$/})
 }
 
 function getUrlTicket() {
@@ -255,8 +259,6 @@ function logueo() {
     fivepaq.Login(datos.Email, datos.Password, datos.RememberMe, LoginOk, LoginFail);
 }
 
-
-
 function mostrarPassword() {
     var cambio = document.getElementById("Password");
     if (cambio.type == "password") {
@@ -265,6 +267,14 @@ function mostrarPassword() {
     } else {
         cambio.type = "password";
         $(".icon").removeClass("fa fa-eye").addClass("fa fa-eye-slash");
+    }
+}
+function tPersona(){
+    let tPersona =  $("#accountTipoIdentificacion").val()
+    if(tPersona == "juridica"){
+        $("#empresa").removeAttr('hidden');
+    }else{
+        $("#empresa").attr("hidden",true);
     }
 }
 $(document).ready(function () {

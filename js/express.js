@@ -10,7 +10,7 @@ var fivepaq = {
 		dataIn.E = email;
 		dataIn.N = '';
 		dataIn.Tel = telefono;
-		dataIn.Con = ''; 
+		dataIn.Con = '';
 
 		var datos = {
 			Email: email,
@@ -98,7 +98,7 @@ var fivepaq = {
 
 	logOut: function () {
 		sessionStorage.removeItem('appData');
-		window.location.href = "https://fivepaq.com/";
+		window.location.href = "http://courierexpress.fivepaq.com";
 	},
 
 	cargarCarriers: function (CarriersOk, CarriersFail) {
@@ -166,7 +166,37 @@ var fivepaq = {
 			Cuenta.EMail = EMail
 			Cuenta.Asesor = Asesor
 			Cuenta.TicketId = Ticket
-		} 
+		}
+		if (ConvenioCta == 26) {
+			Cuenta.Convenio = "CL";
+			Cuenta.LlaveConvenio = "6fc96853-c400-470a-ae1d-5bd3db7b3480";
+			Cuenta.Documento = Documento
+			Cuenta.Empresa = Empresa
+			Cuenta.Nombre = Nombre
+			Cuenta.Direccion = Direccion
+			Cuenta.CiudadId = CiudadId
+			Cuenta.CodigoPostal = CodigoPostal
+			Cuenta.Telefono = Telefono
+			Cuenta.Password = Password
+			Cuenta.EMail = EMail
+			Cuenta.Asesor = Asesor
+			Cuenta.TicketId = Ticket
+		}
+		if (ConvenioCta == 27) {
+			Cuenta.Convenio = "CP";
+			Cuenta.LlaveConvenio = "ecaadd13-5f9c-499b-9a8c-fa27c1c58039";
+			Cuenta.Documento = Documento
+			Cuenta.Empresa = Empresa
+			Cuenta.Nombre = Nombre
+			Cuenta.Direccion = Direccion
+			Cuenta.CiudadId = CiudadId
+			Cuenta.CodigoPostal = CodigoPostal
+			Cuenta.Telefono = Telefono
+			Cuenta.Password = Password
+			Cuenta.EMail = EMail
+			Cuenta.Asesor = Asesor
+			Cuenta.TicketId = Ticket
+		}
 
 		$.ajax({
 			url: "https://fpaq.azurewebsites.net/api/cuentas",
@@ -251,13 +281,8 @@ var fivepaq = {
 					type: 'success',
 					confirmButtonText: 'Ok',
 					allowOutsideClick: false,
-				}).then((result) => {
-					location.href = "index.html"
-					/* location.href = "../index.html" */
-					/* 	if (result.value) {
-							debugger;
-							location.href = "../index.html";
-						} */
+				}).then(() => {
+					location.href = "index.html";
 				})
 
 			})
@@ -287,7 +312,7 @@ var fivepaq = {
 		$.ajax(ajaxObj)
 			.done(function (result) {
 				console.log("Envio mail");
-				swal({
+				swal.fire({
 					title: '¡Te Enviamos un Email!',
 					text: "Te hemos enviado un correo electrónico con instrucciones para volver a establecer tu contraseña.",
 					type: 'success',
@@ -305,7 +330,7 @@ var fivepaq = {
 				console.log(jqXHR);
 				console.log("sadRequest");
 				console.log(textStatus);
-				swal({
+				swal.fire({
 					title: '¡Algo paso!',
 					text: 'por favor comunique con nosotros al Email: soporte@fivepaq.com',
 					type: 'error',
@@ -335,7 +360,7 @@ var fivepaq = {
 			.done(function (result) {
 				console.log("ResteoPass");
 				console.log(result);
-				swal({
+				swal.fire({
 					title: '¡Se ha restablecido la contraseña!',
 					text: "Inicia sesión nuevamente",
 					type: 'success',
@@ -343,7 +368,7 @@ var fivepaq = {
 					allowOutsideClick: false,
 				}).then((result) => {
 					if (result.value) {
-						location.href = "../index.html";
+						location.href = "index.html";
 					}
 				})
 			})
@@ -352,7 +377,7 @@ var fivepaq = {
 				console.log("sadRequest");
 				console.log(jqXHR);
 				console.log(textStatus);
-				swal({
+				swal.fire({
 					title: '¡Algo paso!',
 					text: "por favor comunique con nosotros al Email: soporte@fivepaq.com",
 					type: 'error',
@@ -360,9 +385,11 @@ var fivepaq = {
 					allowOutsideClick: false,
 				}).then((result) => {
 					if (result.value) {
-						location.href = "../index.html";
+						location.href = "index.html";
 					}
 				})
+
+
 			})
 
 	},
@@ -373,7 +400,10 @@ var fivepaq = {
 		let formData = new FormData();
 		formData.append('clientID', clientID);
 		formData.append('trackingNumber', trackingNumber);
-		let imagen = document.getElementById('ImageUrl').files[0];
+		let file = document.getElementById('ImageUrl').files[0];
+		let arrayType = file.type.split("/");
+		let extension = arrayType[1];
+		let newFile = new File([file], `${trackingNumber}ID${clientID}.${extension}`, {type: file.type});
 		formData.append('ImageUrl', imagen);
 		formData.append('idCarrier', idCarrier);
 		formData.append('description', description);

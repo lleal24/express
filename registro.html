@@ -29,18 +29,18 @@
 	<link rel="stylesheet" href="css/animate.min.css" />
 	<link rel="stylesheet" href="css/color.css" />
 
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-	<!-- Validator -->
-	<script src="vendor/jquery.validate.js"></script>
-
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="apple-touch-icon" href="img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon.ico">
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- Validator -->
+	<script src="vendor/jquery.validate.js"></script>
+
 </head>
 
 <body>
@@ -179,105 +179,106 @@
 						<div class="col-md-9 section-columns mb-50">
 							<!-- 1/2 column -->
 							<div class="row">
+
 								<div class="col-sm-12 text-center">
 									<h1 class="section-title section-title__lg">NUEVO CASILLERO</h1>
 								</div> <!-- end col -->
 							</div><br /><br /> <!-- end row -->
-
 							<div class="row">
 								<div class="col-sm-12">
 									<h6>Selecciona un Plan</h6>
-									<select name="mostrarEmp" class="form-control form-control-rounded form-control-sm"
-										id="convenioRegistro">
-										<!-- <option value="25" selected>CourierExpressSTANDART</option> -->
-										<option value="1024" selected>CourierExpressSTANDART</option>
+									<select name="mostrarEmp" id="convenioRegistro">
+										<option selected>Selecione el plan</option>
+										<option value="25">CourierExpressSTANDART</option>
+										<option value="26">CourierExpress CLUB</option>
+										<option value="27">CourierExpress PYME</option>
 									</select>
 								</div> <!-- end col -->
-
 								<!-- end col -->
 							</div><!-- end row -->
-
 							<div class="row">
 
 								<div class="col-sm-4">
 									<h6>Información personal</h6>
-									<input name="text" type="text" placeholder="Nombre" id="nombre" name="nombre"
-										maxlength="20" value="" placeholder="Nombres *" required=""
-										data-toggle="tooltip" data-placement="bottom" title=""
-										data-original-title="Ingresa nombres">
-									<input name="text" type="text" placeholder="Apellido" name="apellidos"
-										id="apellidos" value="" placeholder="Apellidos *" required=""
-										data-toggle="tooltip" data-placement="bottom" title=""
-										data-original-title="Ingresa apellidos">
-									<input name="text" type="email" placeholder="Correo" id="emailRegistroConfirm"
-										name="emailRegistroConfirm" placeholder="Email *" id="email" value=""
-										required="" data-toggle="tooltip" data-placement="bottom" title=""
+									<input type="text" id="nombre" name="nombre" maxlength="20" value=""
+										placeholder="Nombres *" required="" data-toggle="tooltip"
+										data-placement="bottom" title="" data-original-title="Ingresa nombres">
+									<input type="text" name="apellidos" id="apellidos" value=""
+										placeholder="Apellidos *" required="" data-toggle="tooltip"
+										data-placement="bottom" title="" data-original-title="Ingresa apellidos">
+									<input type="email" placeholder="Email" id="emailRegistro" name="emailRegistro"
+										value="" required="" data-toggle="tooltip" data-placement="bottom" title=""
 										data-original-title="Ingresa tu Email">
-									<input name="text" type="number" placeholder="Télefono" id="telefotno" required
-										data-toggle="tooltip" data-placement="bottom"
+									<input type="text" id="telefono" value="" placeholder="Teléfono" required=""
+										data-toggle="tooltip" data-placement="bottom" title=""
 										data-original-title="Ingresa tu número Telefónico">
 									<select name="pais" id="pais" required="" onchange="cargaDept()"
-										class="form-control form-control-rounded form-control-sm" data-toggle="tooltip"
-										data-placement="auto" title="" data-original-title="Seleccione un País">
+										data-toggle="tooltip" data-placement="auto" title=""
+										data-original-title="Seleccione un País">
 										<option selected value="">Seleccione País</option>
 									</select>
 									<select name="estado" id="estado" required="" onchange="cargaCiudades()"
-										class="form-control form-control-rounded form-control-sm" data-toggle="tooltip"
-										data-placement="auto" title=""
+										data-toggle="tooltip" data-placement="auto" title=""
 										data-original-title="Seleccione un Departamento o Estado">
-										<option selected value="">Seleccione Departamento/Estado</option>
+										<option selected value="">Seleccione Departamento</option>
 									</select>
 									<select name="ciudad" id="ciudad" required="" onchange="getIdLocation()"
-										class="form-control form-control-rounded form-control-sm" data-toggle="tooltip"
-										data-placement="auto" title=""
+										data-toggle="tooltip" data-placement="auto" title=""
 										data-original-title="Seleccione una ciudad o provincia">
-										<option selected value="">Seleccione Ciudad/Provincia</option>
+										<option selected value="">Seleccione Ciudad</option>
 									</select>
+									<input type="text" id="direccion" value="" placeholder="Dirección" required=""
+										data-toggle="tooltip" data-placement="bottom" title=""
+										data-original-title="Escribe tu dirección de entregas">
 									<input hidden="true" id="ciudadIdRegistro" value="0" />
 									<input hidden="true" id="ciudadTipoRegistro" />
 
-									<input name="text" type="text" placeholder="Dirección" id="direccion" value=""
-										required="" data-toggle="tooltip" data-placement="bottom" title=""
-										data-original-title="Escribe tu dirección de entregas">
-
 									<h6>Información Adicional</h6>
-									<select name="accountTipoIdentificacion" onchange="pagoOnChange(this)"
+									<select name="accountTipoIdentificacion" onchange="tPersona()"
 										id="accountTipoIdentificacion">
-										<option selected value="default">Persona</option>
-										<option value="green">Persona Natural</option>
-										<option value="black">Persona Jurídica</option>
+										<option selected value="">Tipo de Persona</option>
+										<option value="natural">Persona Natural</option>
+										<option value="juridica">Persona Jurídica</option>
 									</select>
+									<input hidden="true" type="text" id="empresa" placeholder="Empresa"
+										data-toggle="tooltip" data-placement="bottom" title=""
+										data-original-title="Nombre de la empresa en caso de ser persona juridica">
 									<select name="AsesorID" id="AsesorID" onchange="pagoOnChange(this)">
-										<option selected value="default">Asesor</option>
-										<option value="green">William Veloza</option>
-										<option value="black">Pagina web</option>
+										<option selected="" value="0">Seleccione Asesor (web)</option>
+										<option value="1">Página WEB</option>
 									</select>
 								</div> <!-- end col -->
 
 								<div class="col-sm-4">
 									<h6>Documentos</h6>
-									<select id="tipoDoc" name="tipoDoc" required>
-										<option selected>Tipo de Documento</option>
+									<select id="tipoDoc" name="tipoDoc">
+										<option selected value="">Seleccione Tipo Documento *</option>
 										<option>Cédula</option>
-										<option>Nit</option>
 										<option>Pasaporte</option>
+										<option>Nit</option>
 									</select>
-									<input name="text" type="number" placeholder="Identificación" id="documento"
-										name="documento" value="" required="" data-toggle="tooltip"
+									<input type="text" id="documento" name="documento" value=""
+										placeholder="Identificación *" required="" data-toggle="tooltip"
 										data-placement="bottom" title="" data-original-title="Digita tu Identificación">
-									<input name="text" type="number" placeholder="Código Postal" required>
-
-									<label for="pass">Contraseña</label> <i class="fa fa-eye-slash icon"
+									<input type="text" id="cpostal" value="" placeholder="Código Postal" required=""
+										data-toggle="tooltip" data-placement="bottom" title=""
+										data-original-title="Digita tu código postal, en caso contrario http://www.codigopostal.gov.co/">
+									<label for="pass">Contraseña * </label> <i class="fa fa-eye-slash icon"
 										onclick="mostrarContrasena()"></i>
-									<input type="Password" id="passwordRegistro" name="passwordRegistro"
-										class="form-control form-control-rounded form-control-sm" required=""
-										maxlength="50" placeholder="Digíte contraseña">
-
+									<input type="Password" id="passwordRegistro" name="passwordRegistro" required=""
+										maxlength="50" placeholder="Digíte contraseña" data-toggle="tooltip"
+										data-placement="bottom" title=""
+										data-original-title="La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.">
+									<label for="pass">Confirmar Contraseña * </label> <i class="fa fa-eye-slash icon"
+										onclick="mostrarContrasenaConfirm()"></i>
+									<input type="Password" id="passwordRegistroConfirm" name="passwordRegistroConfirm"
+										required="" class="form-control form-control-rounded form-control-sm" id="pass2"
+										placeholder="Confirmar Contraseña">
 									<ul>
 										<li>
 											<label for="checkbox2">Acepto terminos</label>
 											<input type="checkbox" class="input-checkbox" name="checkbox"
-												id="ex-check-1">
+												id="ex-check-1" required>
 											<a style="cursor: help;" data-toggle="modal" data-target="#Contrato">Ver
 												Aquí</a>
 										</li>
@@ -286,14 +287,12 @@
 									<h6>Codígo Promocional</h6>
 									<input id="ticket" name="ticket" type="text" maxlength="50" class="form-control"
 										placeholder="Código promocional" onchange="getTicket()">
+									<p id="ticketLabel" name="ticketLabel" class="error" style="display: none"></p>
 
-									<input class="btn btn-lg btn-blue mt-30" type="submit" name="submit"
-										value="Guardar Cuenta" onclick="grabarClick()" />
-
+									<input class="btn btn-lg btn-stroke" type="submit" name="submit"
+									value="Guardar Cuenta" onclick="grabarClick()" />
 
 								</div> <!-- end col -->
-
-
 								<div class="col-sm-4">
 									<a href=""><i class="fa fa-bell fa-3x"></i></a><br /><br />
 									<h3>Usos del Casillero</h3>
@@ -478,18 +477,18 @@
 	</div> <!-- end main-wrapper -->
 
 	<!-- jQuery Scripts -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
 	<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
 	<script type="text/javascript" src="js/rev-slider.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="js/express.js"></script>
-	<script type="text/javascript" src="js/getCiudades.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/express.js"></script>
+	<!-- <script type="text/javascript" src="js/getCiudades.js"></script> -->
 	<script type="text/javascript" src="js/sweetalert.min.js"></script>
-
+	<script type="text/javascript" src="js/registro-ciudades.js"></script>
 
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>

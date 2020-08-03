@@ -54,6 +54,4 @@ function cambioPass() {
         "La contraseña no cumple con los requerimientos minimos"
     );
     $("#NewPassword").rules("add", { regex: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{6,16}$/})
-
-
 }

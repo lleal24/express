@@ -77,12 +77,12 @@
 	});
 
 
-	/* Onepage Nav
+	/* Onepage Nav /*Comentariado porque agrega un evento a los elementos <a> del nav y no permite redirigirse a la pagina
 	-------------------------------------------------------*/
-	$('.onepage-nav .navbar-collapse ul li a').on('click',function() {
-		$(".navbar-collapse").collapse('hide');
-		return false;
-	});
+	// $('.onepage-nav .navbar-collapse ul li a').on('click',function() {
+	// 	$(".navbar-collapse").collapse('hide');
+	// 	return false;
+	// });
 
 	// Smooth Scroll Navigation
 	$('.local-scroll').localScroll({offset: {top: -60},duration: 1500,easing:'easeInOutExpo'});
@@ -148,7 +148,7 @@
 
 	/* Mobile Navigation 
 	-------------------------------------------------------*/
-	$('.dropdown-toggle').on('click', function(e){ e.preventDefault(); });
+	// $('.dropdown-toggle').on('click', function(e){ e.preventDefault(); });
 	
 
 	/* Mobile Detect

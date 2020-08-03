@@ -2,21 +2,7 @@ const paqBaseUrlActuales = "https://fpaq.azurewebsites.net/api/packages/";
 const paqBaseUrlHistorico = "https://fpaq.azurewebsites.net/api/packages/";
 const paqBaseUrlAlertas = "https://fpaq.azurewebsites.net/api/PreAlerts/GetCurrentPrealertsByClient/";
 
-window.onload = callData;
 
-function callData() {
-    var dataout = fivepaq.dataOut();
-    $("#nomUsuario").html(dataout.U); //este es el campo del usuario
-    $("#emailUsuario").html(dataout.E); //este es el campo del Email
-    $("#numCasillero").html(dataout.N); //Este es campo del casillero
-    $("#telefonoUsuario").html(dataout.Tel); //Este es campo del telefono
-    var dataout = fivepaq.dataOut();
-
-    if (dataout == null || dataout.L !== true) {
-        location.href = "index.html";
-    }
-    fivepaq.cargarDireccionesCliente();
-}
 
 function cerrarsesion() {
     fivepaq.logOut();
@@ -112,26 +98,3 @@ const valert = new Vue({
 
 
 
-// async function mcActuales() {
-//     try {
-//         var dataout = JSON.parse(sessionStorage.getItem('appData'));
-//         let response = await fetch(paqBaseUrlActuales + dataout.C, {
-//             headers: {
-//                 "Authorization": "Bearer " + dataout.T
-//             }
-//         });
-//         let result = await response.json();
-//         let element = getElementById('dataActuales').innerHTML = "";
-//         element.html = `<tr>
-//                             <td>${element}</td>
-//                         </tr>
-//         `
-
-//         console.log(result);
-
-//     } catch (error) {
-//         console.log(error);
-//     }
-
-
-// }

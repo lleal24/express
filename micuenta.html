@@ -398,7 +398,7 @@
 														<th>Guía</th>
 														<th>Contenido</th>
 														<th>VR-USD</th>
-														<th>Peso (Grs)</th>
+														<th>Peso (Lb)</th>
 														<th>Estado</th>
 														<th>&nbsp;</th>
 													</thead>
@@ -414,7 +414,7 @@
 																v-else="paq.Description.length >=20">
 																{{ paq.Description.substring(0,18)+".."}}</td>
 															<td class="table-responsive">{{ paq.DeclaredValue }}</td>
-															<td class="table-responsive">{{ paq.Weight }}</td>
+															<td class="table-responsive">{{ paq.Weight/454 | formatNumber }}</td>
 															<td class="table-responsive">{{ paq.StateDescription }}</td>
 															<td class="table-responsive"><a
 																	:href="'mc-tracking.html?id=' + paq.PackageId +'#headingTrack'">Tracking</a>
@@ -439,9 +439,10 @@
 													<thead class="table-responsive">
 														<th>Fecha</th>
 														<th>Guía</th>
+														<th>Carrier</th>
 														<th>Contenido</th>
 														<th>VR-USD</th>
-														<th>Peso (Grs)</th>
+														<th>Peso (Lb)</th>
 														<th>Estado</th>
 														<th>&nbsp;</th>
 													</thead>
@@ -450,6 +451,7 @@
 															<td class="table-responsive">
 																{{ paq.DateDelivery | formatDate }} </td>
 															<td class="table-responsive">{{ paq.PackageId }}</td>
+															<td class="table-responsive">{{ paq.CarrierNumber }}</td>
 															<td class="table-responsive"
 																v-if="paq.Description.length <20">
 																{{ paq.Description }}</td>
@@ -457,8 +459,8 @@
 																v-else="paq.Description.length >=20">
 																{{ paq.Description.substring(0,18)+".."}}</td>
 															<td class="table-responsive">{{ paq.DeclaredValue }}</td>
-															<td class="table-responsive">{{ paq.Weight }}</td>
-															<td class="table-responsive">{{ paq.State }}</td>
+															<td class="table-responsive">{{ paq.Weight/454 | formatNumber }}</td>
+															<td class="table-responsive">{{ paq.StateDescription }}</td>
 															<td class="table-responsive"><a
 																	:href="'mc-tracking.html?id=' + paq.PackageId +'#headingTrack'">Tracking</a>
 															</td>
@@ -1136,6 +1138,7 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/mc-alerta.js"></script>
 	<script type="text/javascript" src="js/moment.js"></script>
+	<script src="js/es.js"></script>
 	<script type="text/javascript" src="js/calculadoraInterna.js"></script>
 	<script type="text/javascript" src="js/cambioPassword.js"></script>
 	<script type="text/javascript" src="js/registro-ciudades.js"></script>

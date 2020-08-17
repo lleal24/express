@@ -2,9 +2,14 @@ const paqBaseUrl = "https://fpaqtest.azurewebsites.net/api/packages/";
 
 Vue.filter('formatDate', function(value) {
   if (value) {
-    return moment(String(value)).format('DD/MM/YYYY hh:mm')
+    return moment(String(value)).locale('es').format('LLL')
   }
 });
+
+Vue.filter("formatNumber", function (value) {
+  return (value).toFixed(); 
+});
+
 const vp = new Vue({
   el: '#appPaq',
   data: {

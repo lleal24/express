@@ -143,36 +143,41 @@ function grabarClick() {
     );
     $("#telefono").rules("add", { regex: "^\\d{1,20}$" })
     $("#cpostal").rules("add", { regex: "^\\d{1,10}$" })
-    $("#passwordRegistro").rules("add", { regex: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{6,16}$/})
+    $("#passwordRegistro").rules("add", { regex: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{6,16}$/ })
 }
 
 function getUrlTicket() {
     var url = "https://fpaq.azurewebsites.net/api/Tickets/";
-    url += $("#ticket").val();
-    debugger;
-    return url;
+    //var url = "https://fpaqtest.azurewebsites.net/api/Tickets/";
+    //var url = "https://localhost:44347/api/Tickets/";
+    if ($("#ticket").val() != "") {
+        url += $("#ticket").val() + "/" + $("#convenioRegistro").val();
+        debugger;
+        return url;
+    }
 }
+
 
 function getTicket() {
     $.ajax({
         url: getUrlTicket(),
         type: 'GET',
-        success: function (resultado) {
-            if (resultado != null) {
-                console.log(resultado.TicketId);
-                debugger;
-                $('#ticketId').val(resultado.TicketId);
+        success: function (TicketId) {
+            if (TicketId.Error == null) {
+                $("#ticketId").val(TicketId.TicketId);
                 $("#ticketLabel").val("");
                 $("#ticketLabel").hide();
             } else {
                 debugger;
-                $("#ticketLabel").text("No existe este Código");
+                swal("¡ha ocurrido un error! ", TicketId.Error.ErrorMessage, "error");
+                $("#ticketLabel").text("No existe este Código o esta vencido");
                 $("#ticketLabel").show();
                 $("#ticketId").val("");
+                $("#ticket").focus();
+                $("#ticket").val("");
             }
         },
         error: function (request, message, error) {
-            debugger;
             handleException(request, message, error);
         }
     });
@@ -269,12 +274,12 @@ function mostrarPassword() {
         $(".icon").removeClass("fa fa-eye").addClass("fa fa-eye-slash");
     }
 }
-function tPersona(){
-    let tPersona =  $("#accountTipoIdentificacion").val()
-    if(tPersona == "juridica"){
+function tPersona() {
+    let tPersona = $("#accountTipoIdentificacion").val()
+    if (tPersona == "juridica") {
         $("#empresa").removeAttr('hidden');
-    }else{
-        $("#empresa").attr("hidden",true);
+    } else {
+        $("#empresa").attr("hidden", true);
     }
 }
 $(document).ready(function () {

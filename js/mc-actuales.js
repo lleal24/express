@@ -1,4 +1,4 @@
-const paqBaseUrl = "https://fpaqtest.azurewebsites.net/api/packages/";
+const paqBaseUrl = "https://fpaq.azurewebsites.net/api/packages/";
 
 Vue.filter('formatDate', function(value) {
   if (value) {

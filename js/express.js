@@ -98,7 +98,7 @@ var fivepaq = {
 
 	logOut: function () {
 		sessionStorage.removeItem('appData');
-		window.location.href = "http://courierexpress.fivepaq.com";
+		window.location.href = "https://courierexpress.com.co/";
 	},
 
 	cargarCarriers: function (CarriersOk, CarriersFail) {
@@ -151,7 +151,7 @@ var fivepaq = {
 	},
 	CuentaAdd: function (ConvenioCta, Documento, Empresa, Nombre, Direccion, CiudadId, CodigoPostal, Telefono, Password, EMail, Asesor, Ticket) {
 		Cuenta = new Object();
-
+		document.getElementById("btnSaveAccount").style.visibility = "hidden"
 		if (ConvenioCta == 25) {
 			Cuenta.Convenio = "CC";
 			Cuenta.LlaveConvenio = "1700b44e-381d-4f83-87ee-7258cbb16ed9";
@@ -204,10 +204,12 @@ var fivepaq = {
 			contentType: "application/json;charset=utf-8",
 			data: JSON.stringify(Cuenta),
 			success: function (noCuenta) {
+				document.getElementById("btnSaveAccount").style.visibility = "visible"
 				CuentaSuccess(noCuenta);
-				console.log(noCuenta)
+				//console.log(noCuenta)
 			},
 			error: function (request, message, error) {
+				document.getElementById("btnSaveAccount").style.visibility = "visible"
 				handleException(request, message, error);
 			}
 		});
@@ -326,21 +328,21 @@ var fivepaq = {
 				})
 			})
 			.fail(function (jqXHR, textStatus) {
-				console.log("sadRequest");
-				console.log(jqXHR);
-				console.log("sadRequest");
-				console.log(textStatus);
+				// console.log("sadRequest");
+				// console.log(jqXHR);
+				// console.log("sadRequest");
+				// console.log(textStatus);
 				swal.fire({
 					title: '¡Algo paso!',
-					text: 'por favor comunique con nosotros al Email: soporte@fivepaq.com',
+					text: `No se pudo enviar Email.${jqXHR.responseJSON}`,
 					type: 'error',
 					confirmButtonText: 'Ok',
 					allowOutsideClick: false,
 				}).then((result) => {
-					if (result.value) {
-						debugger;
-						location.href = "index.html";
-					}
+					// if (result.value) {
+					// 	debugger;
+					// 	location.href = "index.html";
+					// }
 				})
 			})
 	},
